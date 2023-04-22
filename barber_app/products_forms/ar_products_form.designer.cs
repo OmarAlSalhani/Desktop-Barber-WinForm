@@ -87,7 +87,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 38);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(762, 38);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // label1
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cairo", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(325, 1);
+            this.label1.Location = new System.Drawing.Point(321, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 36);
             this.label1.TabIndex = 1;
@@ -573,7 +573,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 483);
+            this.ClientSize = new System.Drawing.Size(762, 483);
             this.Controls.Add(this.groupControl16);
             this.Controls.Add(this.groupControl17);
             this.Controls.Add(this.groupControl2);

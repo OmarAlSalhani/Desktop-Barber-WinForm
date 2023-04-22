@@ -104,159 +104,159 @@ namespace barber_app.fatora_forms
             string a = "";
             if (choices == 1)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
   FROM [sales_head_table] where fatora_id={Convert.ToInt32(id_barcode_tb.Text)}";
             }
             if (choices == 2)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where sell_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
+  FROM [sales_head_table] where sell_date between '{f}' and '{l}'";
             }
             if (choices == 3)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where username=N'{username_cb.Text}'";
+  FROM [sales_head_table] where username='{username_cb.Text}'";
             }
             if (choices == 4)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where customer_name=N'{customer_name_cb.Text}'";
+  FROM [sales_head_table] where customer_name='{customer_name_cb.Text}'";
             }
             if (choices == 5)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where bill_type=N'{fatora_type_cb.Text}'";
+  FROM [sales_head_table] where bill_type='{fatora_type_cb.Text}'";
             }
             if (choices == 6)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where sell_date between convert(date,'{f}',105) and convert(date,'{l}',105) and username=N'{username_cb.Text}'";
+  FROM [sales_head_table] where sell_date between '{f}' and '{l}' and username='{username_cb.Text}'";
             }
             if (choices == 7)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where sell_date between convert(date,'{f}',105) and convert(date,'{l}',105) and username=N'{username_cb.Text}' and customer_name=N'{customer_name_cb.Text}'";
+  FROM [sales_head_table] where sell_date between '{f}' and '{l}' and username='{username_cb.Text}' and customer_name='{customer_name_cb.Text}'";
             }
             if (choices == 8)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where sell_date between convert(date,'{f}',105) and convert(date,'{l}',105) and username=N'{username_cb.Text}' and customer_name=N'{customer_name_cb.Text}' and bill_type=N'{fatora_type_cb.Text}'";
+  FROM [sales_head_table] where sell_date between '{f}' and '{l}' and username='{username_cb.Text}' and customer_name='{customer_name_cb.Text}' and bill_type='{fatora_type_cb.Text}'";
             }
             if (choices == 9)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where customer_name=N'{customer_name_cb.Text}' and username=N'{username_cb.Text}'";
+  FROM [sales_head_table] where customer_name='{customer_name_cb.Text}' and username='{username_cb.Text}'";
             }
             if (choices == 10)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where bill_type=N'{fatora_type_cb.Text}' and username=N'{username_cb.Text}'";
+  FROM [sales_head_table] where bill_type='{fatora_type_cb.Text}' and username='{username_cb.Text}'";
             }
             if (choices == 11)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where bill_type=N'{fatora_type_cb.Text}' and username=N'{username_cb.Text}' and customer_name=N'{customer_name_cb.Text}'";
+  FROM [sales_head_table] where bill_type='{fatora_type_cb.Text}' and username='{username_cb.Text}' and customer_name='{customer_name_cb.Text}'";
             }
             if (choices == 12)
             {
-                a = $@"SELECT [fatora_id] as 'رقم الفاتورة'
+                a = $@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'   
-  FROM [sales_head_table] where bill_type=N'{fatora_type_cb.Text}' and customer_name=N'{customer_name_cb.Text}'";
+  FROM [sales_head_table] where bill_type='{fatora_type_cb.Text}' and customer_name='{customer_name_cb.Text}'";
             }
             return a;
         }
@@ -305,9 +305,13 @@ namespace barber_app.fatora_forms
                 return;
             }
             my_grid_view_class.set_datasource(gridControl2, gridView2, table);
-            my_grid_view_class.set_summary(gridView2, "القيمة الإجمالية");
-            my_grid_view_class.set_summary(gridView2, "القيمة المدفوعة");
-            my_grid_view_class.set_summary(gridView2, "القيمة المتبقية");
+            my_grid_view_class.set_summary(gridView2, "الأجمالي بعد الضريبة");
+            my_grid_view_class.set_summary(gridView2, "الأجمالي قبل الضريبة");
+            my_grid_view_class.set_summary(gridView2, "القيمة النهائية");
+            my_grid_view_class.set_summary(gridView2, "الخصم");
+            my_grid_view_class.set_summary(gridView2, "الضريبة");
+            my_grid_view_class.set_summary(gridView2, "المدفوع");
+            my_grid_view_class.set_summary(gridView2, "المتبقي");
         }
         public static string from_date, to_date;
         private void print_btn_Click(object sender, EventArgs e)
@@ -319,21 +323,20 @@ namespace barber_app.fatora_forms
             }
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.sales_report.print(my_grid_view_class.gridview_to_data_table(gridView2), null);
+           repost_pos.sales_report.print(my_grid_view_class.gridview_to_data_table(gridView2), null);
 
         }
 
         private void ar_sell_report_form_Load(object sender, EventArgs e)
         {
-            DataTable table = connection_class.select(@"SELECT [fatora_id] as 'رقم الفاتورة'
+            DataTable table = connection_class.select(@"SELECT [fatora_id] as 'الفاتورة'
       ,[bill_type] as 'نوع الفاتورة'
-      ,convert(varchar,[sell_date],105)+' '+[sell_time] as 'تاريخ ووقت البيع'
+      ,sell_date|| ' ' ||[sell_time] as 'تاريخ ووقت البيع'
       ,(select customer_name from customers_table where customers_table.customer_id=sales_head_table.customer_id) as 'العميل'
-      ,[total_amount] as 'القيمة الإجمالية'
-	  ,[paied_money] as 'القيمة المدفوعة'
-      ,[net_amount] as 'القيمة المتبقية'
-	  ,[pay_method] as 'طريقة الدفع'
+      ,[total_before_taxes] as 'الأجمالي قبل الضريبة',[taxes] as 'الضريبة',[total_amount] as 'الأجمالي بعد الضريبة',[discount] as 'الخصم',[net_amount] as 'القيمة النهائية'
+	  ,[paied_money] as 'المدفوع'
+      ,[net_amount] as 'المتبقي'
+	  
       ,(select username from users_table where users_table.user_id=userID) as 'المستخدم'    
   FROM [sales_head_table] where 1 = 2");
             my_grid_view_class.set_datasource(gridControl2, gridView2, table);
@@ -363,8 +366,7 @@ namespace barber_app.fatora_forms
             }
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //  repost_pos.sales_report.to_word(my_grid_view_class.gridview_to_data_table(gridView2));
+           repost_pos.sales_report.to_word(my_grid_view_class.gridview_to_data_table(gridView2));
         }
 
         private void excel_btn_Click(object sender, EventArgs e)
@@ -376,8 +378,7 @@ namespace barber_app.fatora_forms
             }
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.sales_report.to_excel(my_grid_view_class.gridview_to_data_table(gridView2));
+            repost_pos.sales_report.to_excel(my_grid_view_class.gridview_to_data_table(gridView2));
         }
 
         private void pdf_btn_Click(object sender, EventArgs e)
@@ -389,8 +390,7 @@ namespace barber_app.fatora_forms
             }
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.sales_report.to_pdf(my_grid_view_class.gridview_to_data_table(gridView2));
+           repost_pos.sales_report.to_pdf(my_grid_view_class.gridview_to_data_table(gridView2));
         }
         public static int fatora_id;
 

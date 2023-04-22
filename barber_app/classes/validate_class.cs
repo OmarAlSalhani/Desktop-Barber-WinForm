@@ -14,7 +14,7 @@ namespace barber_app.classes
         /// </summary>
         public static bool is_customer_agel_clean(string customer_name)
         {
-            DataTable table = connection_class.select($"select isnull(rsed_aol_moda,0) from customers_table where customer_name=N'{customer_name}'");
+            DataTable table = connection_class.select($"select ifnull(rsed_aol_moda,0) from customers_table where customer_name='{customer_name}'");
             if (table.Rows.Count == 0)
             {
                 return true;
@@ -35,7 +35,7 @@ namespace barber_app.classes
         }
         public static bool is_mord_agel_clean(string mord_name)
         {
-            DataTable table = connection_class.select($"select isnull(aol_moda,0) from morden_table where the_name=N'{mord_name}'");
+            DataTable table = connection_class.select($"select ifnull(aol_moda,0) from morden_table where the_name='{mord_name}'");
             if (table.Rows.Count == 0)
             {
                 return true;
@@ -56,10 +56,10 @@ namespace barber_app.classes
         }
         public static bool is_employee_clean(string employee_name)
         {
-            DataTable selfa_table = connection_class.select($"select isnull(sum(selfa_value),0) from selfa_table where is_paied=0 and employee_name=N'{employee_name}'");
-            DataTable discount_table = connection_class.select($"select isnull(sum(cut_value),0) from employee_cut_table where is_paied=0 and employee_name=N'{employee_name}'");
-            DataTable reward_table = connection_class.select($"select isnull(sum(reward_value),0) from employee_reward_table where is_paied=0 and employee_name=N'{employee_name}'");
-            DataTable warehouse_table = connection_class.select($"select isnull(supervisor_name,'none') from warehouse_table where supervisor_name=N'{employee_name}'");
+            DataTable selfa_table = connection_class.select($"select ifnull(sum(selfa_value),0) from selfa_table where is_paied=0 and employee_name='{employee_name}'");
+            DataTable discount_table = connection_class.select($"select ifnull(sum(cut_value),0) from employee_cut_table where is_paied=0 and employee_name='{employee_name}'");
+            DataTable reward_table = connection_class.select($"select ifnull(sum(reward_value),0) from employee_reward_table where is_paied=0 and employee_name='{employee_name}'");
+            DataTable warehouse_table = connection_class.select($"select ifnull(supervisor_name,'none') from warehouse_table where supervisor_name='{employee_name}'");
             if (selfa_table.Rows.Count == 0 && discount_table.Rows.Count == 0 && reward_table.Rows.Count == 0 && warehouse_table.Rows.Count == 0)
             {
                 return true;
@@ -94,7 +94,7 @@ namespace barber_app.classes
         }
         public static bool is_storage_clean(string storage_name)
         {
-            DataTable table = connection_class.select($"select isnull(storage_value,0) from storage_table where storage_name=N'{storage_name}'");
+            DataTable table = connection_class.select($"select ifnull(storage_value,0) from storage_table where storage_name='{storage_name}'");
             if (table.Rows.Count == 0)
             {
                 return true;
@@ -112,7 +112,7 @@ namespace barber_app.classes
         }
         public static bool is_bank_clean(string bank_name)
         {
-            DataTable table = connection_class.select($"select isnull(bank_value,0) from bank_table where bank_name=N'{bank_name}'");
+            DataTable table = connection_class.select($"select ifnull(bank_value,0) from bank_table where bank_name='{bank_name}'");
             if (table.Rows.Count == 0)
             {
                 return true;
@@ -130,7 +130,7 @@ namespace barber_app.classes
         }
         public static bool is_storage_bound_to_this_user()
         {
-            DataTable table = connection_class.select($"select isnull(storage_id,'none') from users_table where user_id={settings_files.main_settings.Default.userID}");
+            DataTable table = connection_class.select($"select ifnull(storage_id,'none') from users_table where user_id={settings_files.main_settings.Default.userID}");
             if (table.Rows.Count == 0)
             {
                 return false;
@@ -151,7 +151,7 @@ namespace barber_app.classes
         }
         public static bool is_bank_bound_to_this_user()
         {
-            DataTable table = connection_class.select($"select isnull(bank_name,'none') from users_table where username=N'{settings_files.main_settings.Default.username}'");
+            DataTable table = connection_class.select($"select ifnull(bank_name,'none') from users_table where username='{settings_files.main_settings.Default.username}'");
             if (table.Rows.Count == 0)
             {
                 return false;
@@ -172,7 +172,7 @@ namespace barber_app.classes
         }
         public static bool is_company_has_bills(string company_name)
         {
-            DataTable table = connection_class.select($"select * from [buy_head_table] where company_name=N'{company_name}'");
+            DataTable table = connection_class.select($"select * from [buy_head_table] where company_name='{company_name}'");
             if (table.Rows.Count == 0)
             {
                 return false;
@@ -185,7 +185,7 @@ namespace barber_app.classes
         }
         public static bool is_doctor_clean(string doctor_name)
         {
-            DataTable table = connection_class.select($"select isnull(aol_moda,0) from doctors_table where doctor_name=N'{doctor_name}'");
+            DataTable table = connection_class.select($"select ifnull(aol_moda,0) from doctors_table where doctor_name='{doctor_name}'");
             if (table.Rows.Count == 0)
             {
                 return true;

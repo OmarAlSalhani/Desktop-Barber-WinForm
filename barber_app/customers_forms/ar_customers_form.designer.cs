@@ -142,7 +142,6 @@
             this.groupControl2.Size = new System.Drawing.Size(776, 172);
             this.groupControl2.TabIndex = 14;
             this.groupControl2.Text = "البيانات الأساسية";
-            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
             // aol_moda_text
             // 
@@ -612,7 +611,6 @@
             this.groupControl1.Size = new System.Drawing.Size(776, 83);
             this.groupControl1.TabIndex = 41;
             this.groupControl1.Text = "العمليات المتاحة";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // delete_btn
             // 

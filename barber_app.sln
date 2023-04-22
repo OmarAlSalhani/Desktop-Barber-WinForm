@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "barber_app", "barber_app\barber_app.csproj", "{4306ED4F-F678-40EF-A04F-ECE7352DE91B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BarberApp32Setup", "BarberApp32Setup\BarberApp32Setup.vdproj", "{E06F3A44-8E7F-441F-9664-4F988930A5C9}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BarberApp64Setup", "BarberApp64Setup\BarberApp64Setup.vdproj", "{8D715527-587B-4E22-B1A5-17217022A4B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,10 @@ Global
 		{4306ED4F-F678-40EF-A04F-ECE7352DE91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4306ED4F-F678-40EF-A04F-ECE7352DE91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4306ED4F-F678-40EF-A04F-ECE7352DE91B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06F3A44-8E7F-441F-9664-4F988930A5C9}.Debug|Any CPU.ActiveCfg = Debug
+		{E06F3A44-8E7F-441F-9664-4F988930A5C9}.Release|Any CPU.ActiveCfg = Release
+		{8D715527-587B-4E22-B1A5-17217022A4B9}.Debug|Any CPU.ActiveCfg = Debug
+		{8D715527-587B-4E22-B1A5-17217022A4B9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

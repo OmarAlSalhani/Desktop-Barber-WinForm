@@ -30,61 +30,31 @@
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.top_label = new System.Windows.Forms.Label();
-            this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
-            this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.show_snds_report_cbx = new System.Windows.Forms.CheckBox();
-            this.add_snd_srf_cbx = new System.Windows.Forms.CheckBox();
-            this.edit_snd_srf_cbx = new System.Windows.Forms.CheckBox();
-            this.groupControl12 = new DevExpress.XtraEditors.GroupControl();
-            this.add_selfa_cut_cbx = new System.Windows.Forms.CheckBox();
-            this.edit_employee_cbx = new System.Windows.Forms.CheckBox();
-            this.login_logout_cbx = new System.Windows.Forms.CheckBox();
-            this.show_reports_cbx = new System.Windows.Forms.CheckBox();
-            this.salary_give_cbx = new System.Windows.Forms.CheckBox();
-            this.salary_report_cbx = new System.Windows.Forms.CheckBox();
-            this.add_employee_cbx = new System.Windows.Forms.CheckBox();
-            this.groupControl9 = new DevExpress.XtraEditors.GroupControl();
-            this.edit_kfel_cbx = new System.Windows.Forms.CheckBox();
-            this.add_kfel_cbx = new System.Windows.Forms.CheckBox();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.company_kshf_7sab_cbx = new System.Windows.Forms.CheckBox();
-            this.company_tkset_cbx = new System.Windows.Forms.CheckBox();
-            this.edit_company_cbx = new System.Windows.Forms.CheckBox();
-            this.add_company_cbx = new System.Windows.Forms.CheckBox();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.eqrar_tax_cbx = new System.Windows.Forms.CheckBox();
-            this.account_rsed_report_cbx = new System.Windows.Forms.CheckBox();
-            this.mezan_morag3a_cbx = new System.Windows.Forms.CheckBox();
-            this.daily_qed_edit_cbx = new System.Windows.Forms.CheckBox();
-            this.tree_edit_cbx = new System.Windows.Forms.CheckBox();
-            this.tree_add_cbx = new System.Windows.Forms.CheckBox();
-            this.daily_qed_show_add_cbx = new System.Windows.Forms.CheckBox();
-            this.accounts_forwarding_cbx = new System.Windows.Forms.CheckBox();
-            this.daily_qed_report_cbx = new System.Windows.Forms.CheckBox();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-            this.buy_archive_cbx = new System.Windows.Forms.CheckBox();
-            this.sell_archive_cbx = new System.Windows.Forms.CheckBox();
-            this.snd_qbd_archive_cbx = new System.Windows.Forms.CheckBox();
-            this.snd_srf_archive_cbx = new System.Windows.Forms.CheckBox();
             this.save_btn = new DevExpress.XtraEditors.SimpleButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.manage_today_agle = new System.Windows.Forms.CheckBox();
+            this.snds_report = new System.Windows.Forms.CheckBox();
+            this.snd_srf = new System.Windows.Forms.CheckBox();
+            this.snd_qbd = new System.Windows.Forms.CheckBox();
+            this.storages_operations = new System.Windows.Forms.CheckBox();
+            this.manage_storages = new System.Windows.Forms.CheckBox();
+            this.sales_report = new System.Windows.Forms.CheckBox();
+            this.manage_users_roles = new System.Windows.Forms.CheckBox();
+            this.manage_users = new System.Windows.Forms.CheckBox();
+            this.customers_mdeonee = new System.Windows.Forms.CheckBox();
+            this.customers_kshf_7sab = new System.Windows.Forms.CheckBox();
+            this.customers_paied_money = new System.Windows.Forms.CheckBox();
+            this.manage_customers = new System.Windows.Forms.CheckBox();
+            this.manage_daily_brief = new System.Windows.Forms.CheckBox();
+            this.manage_blackbox = new System.Windows.Forms.CheckBox();
+            this.manage_settings = new System.Windows.Forms.CheckBox();
+            this.manage_products = new System.Windows.Forms.CheckBox();
+            this.open_pos = new System.Windows.Forms.CheckBox();
+            this.manage_categories = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
-            this.tabPane1.SuspendLayout();
-            this.tabNavigationPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl12)).BeginInit();
-            this.groupControl12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
-            this.groupControl9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-            this.groupControl5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -98,7 +68,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1140, 38);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(601, 38);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // top_label
@@ -107,418 +77,28 @@
             this.top_label.AutoSize = true;
             this.top_label.Font = new System.Drawing.Font("Cairo", 14F);
             this.top_label.ForeColor = System.Drawing.Color.White;
-            this.top_label.Location = new System.Drawing.Point(405, 1);
+            this.top_label.Location = new System.Drawing.Point(136, 1);
             this.top_label.Name = "top_label";
             this.top_label.Size = new System.Drawing.Size(330, 36);
             this.top_label.TabIndex = 0;
             this.top_label.Text = "إدارة صلاحيات المستخدم : إسم المستخدم";
             // 
-            // tabPane1
+            // save_btn
             // 
-            this.tabPane1.Appearance.BackColor = System.Drawing.Color.White;
-            this.tabPane1.Appearance.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.Appearance.Options.UseBackColor = true;
-            this.tabPane1.Appearance.Options.UseFont = true;
-            this.tabPane1.AppearanceButton.Hovered.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.AppearanceButton.Hovered.Options.UseFont = true;
-            this.tabPane1.AppearanceButton.Normal.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.AppearanceButton.Normal.Options.UseFont = true;
-            this.tabPane1.AppearanceButton.Pressed.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.AppearanceButton.Pressed.Options.UseFont = true;
-            this.tabPane1.Controls.Add(this.tabNavigationPage1);
-            this.tabPane1.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.Location = new System.Drawing.Point(2, 42);
-            this.tabPane1.LookAndFeel.SkinName = "The Bezier";
-            this.tabPane1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.tabPane1.Name = "tabPane1";
-            this.tabPane1.PageProperties.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F, System.Drawing.FontStyle.Bold);
-            this.tabPane1.PageProperties.AppearanceCaption.Options.UseFont = true;
-            this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.tabNavigationPage1});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1135, 402);
-            this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1135, 402);
-            this.tabPane1.TabIndex = 16;
-            this.tabPane1.Text = "tabPane1";
+            this.save_btn.Appearance.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.save_btn.Appearance.Options.UseFont = true;
+            this.save_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_save;
+            this.save_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.save_btn.Location = new System.Drawing.Point(206, 307);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(212, 45);
+            this.save_btn.TabIndex = 1;
+            this.save_btn.Text = "حفظ";
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
-            // tabNavigationPage1
+            // backgroundWorker1
             // 
-            this.tabNavigationPage1.Appearance.BackColor = System.Drawing.Color.White;
-            this.tabNavigationPage1.Appearance.Options.UseBackColor = true;
-            this.tabNavigationPage1.Caption = "الصلاحيات 1";
-            this.tabNavigationPage1.Controls.Add(this.groupControl4);
-            this.tabNavigationPage1.Controls.Add(this.groupControl12);
-            this.tabNavigationPage1.Controls.Add(this.groupControl9);
-            this.tabNavigationPage1.Controls.Add(this.groupControl1);
-            this.tabNavigationPage1.Controls.Add(this.groupControl2);
-            this.tabNavigationPage1.Controls.Add(this.groupControl5);
-            this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1135, 365);
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl4.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupControl4.Appearance.Options.UseBackColor = true;
-            this.groupControl4.AppearanceCaption.BackColor = System.Drawing.Color.Lime;
-            this.groupControl4.AppearanceCaption.BackColor2 = System.Drawing.Color.Lime;
-            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl4.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl4.AppearanceCaption.Options.UseFont = true;
-            this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl4.Controls.Add(this.show_snds_report_cbx);
-            this.groupControl4.Controls.Add(this.add_snd_srf_cbx);
-            this.groupControl4.Controls.Add(this.edit_snd_srf_cbx);
-            this.groupControl4.Location = new System.Drawing.Point(7, 5);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(254, 241);
-            this.groupControl4.TabIndex = 18;
-            this.groupControl4.Text = "السندات";
-            // 
-            // show_snds_report_cbx
-            // 
-            this.show_snds_report_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.show_snds_report_cbx.AutoSize = true;
-            this.show_snds_report_cbx.Checked = true;
-            this.show_snds_report_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.show_snds_report_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.show_snds_report_cbx.Location = new System.Drawing.Point(61, 105);
-            this.show_snds_report_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.show_snds_report_cbx.Name = "show_snds_report_cbx";
-            this.show_snds_report_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.show_snds_report_cbx.Size = new System.Drawing.Size(184, 33);
-            this.show_snds_report_cbx.TabIndex = 90;
-            this.show_snds_report_cbx.Text = "عرض تقرير سندات الصرف";
-            this.show_snds_report_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.show_snds_report_cbx.UseVisualStyleBackColor = true;
-            // 
-            // add_snd_srf_cbx
-            // 
-            this.add_snd_srf_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add_snd_srf_cbx.AutoSize = true;
-            this.add_snd_srf_cbx.Checked = true;
-            this.add_snd_srf_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.add_snd_srf_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.add_snd_srf_cbx.Location = new System.Drawing.Point(111, 35);
-            this.add_snd_srf_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.add_snd_srf_cbx.Name = "add_snd_srf_cbx";
-            this.add_snd_srf_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.add_snd_srf_cbx.Size = new System.Drawing.Size(134, 33);
-            this.add_snd_srf_cbx.TabIndex = 88;
-            this.add_snd_srf_cbx.Text = "إضافة سند صرف";
-            this.add_snd_srf_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_snd_srf_cbx.UseVisualStyleBackColor = true;
-            // 
-            // edit_snd_srf_cbx
-            // 
-            this.edit_snd_srf_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.edit_snd_srf_cbx.AutoSize = true;
-            this.edit_snd_srf_cbx.Checked = true;
-            this.edit_snd_srf_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.edit_snd_srf_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.edit_snd_srf_cbx.Location = new System.Drawing.Point(48, 70);
-            this.edit_snd_srf_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.edit_snd_srf_cbx.Name = "edit_snd_srf_cbx";
-            this.edit_snd_srf_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edit_snd_srf_cbx.Size = new System.Drawing.Size(197, 33);
-            this.edit_snd_srf_cbx.TabIndex = 89;
-            this.edit_snd_srf_cbx.Text = "تعديل وحذف سندات الصرف";
-            this.edit_snd_srf_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.edit_snd_srf_cbx.UseVisualStyleBackColor = true;
-            // 
-            // groupControl12
-            // 
-            this.groupControl12.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl12.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupControl12.Appearance.Options.UseBackColor = true;
-            this.groupControl12.AppearanceCaption.BackColor = System.Drawing.Color.Lime;
-            this.groupControl12.AppearanceCaption.BackColor2 = System.Drawing.Color.Lime;
-            this.groupControl12.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl12.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl12.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl12.AppearanceCaption.Options.UseFont = true;
-            this.groupControl12.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl12.Controls.Add(this.add_selfa_cut_cbx);
-            this.groupControl12.Controls.Add(this.edit_employee_cbx);
-            this.groupControl12.Controls.Add(this.login_logout_cbx);
-            this.groupControl12.Controls.Add(this.show_reports_cbx);
-            this.groupControl12.Controls.Add(this.salary_give_cbx);
-            this.groupControl12.Controls.Add(this.salary_report_cbx);
-            this.groupControl12.Controls.Add(this.add_employee_cbx);
-            this.groupControl12.Location = new System.Drawing.Point(264, 5);
-            this.groupControl12.Name = "groupControl12";
-            this.groupControl12.Size = new System.Drawing.Size(409, 241);
-            this.groupControl12.TabIndex = 15;
-            this.groupControl12.Text = "الموظفين";
-            // 
-            // add_selfa_cut_cbx
-            // 
-            this.add_selfa_cut_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add_selfa_cut_cbx.AutoSize = true;
-            this.add_selfa_cut_cbx.Checked = true;
-            this.add_selfa_cut_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.add_selfa_cut_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.add_selfa_cut_cbx.Location = new System.Drawing.Point(139, 105);
-            this.add_selfa_cut_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.add_selfa_cut_cbx.Name = "add_selfa_cut_cbx";
-            this.add_selfa_cut_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.add_selfa_cut_cbx.Size = new System.Drawing.Size(261, 33);
-            this.add_selfa_cut_cbx.TabIndex = 72;
-            this.add_selfa_cut_cbx.Text = "إضافة سلفة , خصم , مكافئة للموظف";
-            this.add_selfa_cut_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_selfa_cut_cbx.UseVisualStyleBackColor = true;
-            // 
-            // edit_employee_cbx
-            // 
-            this.edit_employee_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.edit_employee_cbx.AutoSize = true;
-            this.edit_employee_cbx.Checked = true;
-            this.edit_employee_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.edit_employee_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.edit_employee_cbx.Location = new System.Drawing.Point(224, 69);
-            this.edit_employee_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.edit_employee_cbx.Name = "edit_employee_cbx";
-            this.edit_employee_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edit_employee_cbx.Size = new System.Drawing.Size(176, 33);
-            this.edit_employee_cbx.TabIndex = 71;
-            this.edit_employee_cbx.Text = "تعديل وحذف الموظفين";
-            this.edit_employee_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.edit_employee_cbx.UseVisualStyleBackColor = true;
-            // 
-            // login_logout_cbx
-            // 
-            this.login_logout_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.login_logout_cbx.AutoSize = true;
-            this.login_logout_cbx.Checked = true;
-            this.login_logout_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.login_logout_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.login_logout_cbx.Location = new System.Drawing.Point(7, 32);
-            this.login_logout_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.login_logout_cbx.Name = "login_logout_cbx";
-            this.login_logout_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.login_logout_cbx.Size = new System.Drawing.Size(171, 33);
-            this.login_logout_cbx.TabIndex = 78;
-            this.login_logout_cbx.Text = "إدارة الحضور والإنصراف";
-            this.login_logout_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.login_logout_cbx.UseVisualStyleBackColor = true;
-            // 
-            // show_reports_cbx
-            // 
-            this.show_reports_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.show_reports_cbx.AutoSize = true;
-            this.show_reports_cbx.Checked = true;
-            this.show_reports_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.show_reports_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.show_reports_cbx.Location = new System.Drawing.Point(131, 177);
-            this.show_reports_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.show_reports_cbx.Name = "show_reports_cbx";
-            this.show_reports_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.show_reports_cbx.Size = new System.Drawing.Size(269, 33);
-            this.show_reports_cbx.TabIndex = 73;
-            this.show_reports_cbx.Text = "عرض تقرير السلف,الخصميات,المكافئات";
-            this.show_reports_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.show_reports_cbx.UseVisualStyleBackColor = true;
-            // 
-            // salary_give_cbx
-            // 
-            this.salary_give_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.salary_give_cbx.AutoSize = true;
-            this.salary_give_cbx.Checked = true;
-            this.salary_give_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.salary_give_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.salary_give_cbx.Location = new System.Drawing.Point(19, 69);
-            this.salary_give_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.salary_give_cbx.Name = "salary_give_cbx";
-            this.salary_give_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.salary_give_cbx.Size = new System.Drawing.Size(159, 33);
-            this.salary_give_cbx.TabIndex = 70;
-            this.salary_give_cbx.Text = "صرف الراتب للموظف";
-            this.salary_give_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.salary_give_cbx.UseVisualStyleBackColor = true;
-            // 
-            // salary_report_cbx
-            // 
-            this.salary_report_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.salary_report_cbx.AutoSize = true;
-            this.salary_report_cbx.Checked = true;
-            this.salary_report_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.salary_report_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.salary_report_cbx.Location = new System.Drawing.Point(196, 140);
-            this.salary_report_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.salary_report_cbx.Name = "salary_report_cbx";
-            this.salary_report_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.salary_report_cbx.Size = new System.Drawing.Size(204, 33);
-            this.salary_report_cbx.TabIndex = 69;
-            this.salary_report_cbx.Tag = "";
-            this.salary_report_cbx.Text = "عرض بيانات رواتب الموظفين";
-            this.salary_report_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.salary_report_cbx.UseVisualStyleBackColor = true;
-            // 
-            // add_employee_cbx
-            // 
-            this.add_employee_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add_employee_cbx.AutoSize = true;
-            this.add_employee_cbx.Checked = true;
-            this.add_employee_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.add_employee_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.add_employee_cbx.Location = new System.Drawing.Point(250, 33);
-            this.add_employee_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.add_employee_cbx.Name = "add_employee_cbx";
-            this.add_employee_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.add_employee_cbx.Size = new System.Drawing.Size(150, 33);
-            this.add_employee_cbx.TabIndex = 68;
-            this.add_employee_cbx.Text = "إضافة موظف جديد";
-            this.add_employee_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_employee_cbx.UseVisualStyleBackColor = true;
-            // 
-            // groupControl9
-            // 
-            this.groupControl9.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl9.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupControl9.Appearance.Options.UseBackColor = true;
-            this.groupControl9.AppearanceCaption.BackColor = System.Drawing.Color.Lime;
-            this.groupControl9.AppearanceCaption.BackColor2 = System.Drawing.Color.Lime;
-            this.groupControl9.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl9.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl9.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl9.AppearanceCaption.Options.UseFont = true;
-            this.groupControl9.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl9.Controls.Add(this.edit_kfel_cbx);
-            this.groupControl9.Controls.Add(this.add_kfel_cbx);
-            this.groupControl9.Location = new System.Drawing.Point(7, 249);
-            this.groupControl9.Name = "groupControl9";
-            this.groupControl9.Size = new System.Drawing.Size(254, 109);
-            this.groupControl9.TabIndex = 16;
-            this.groupControl9.Text = "الكفلاء";
-            // 
-            // edit_kfel_cbx
-            // 
-            this.edit_kfel_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.edit_kfel_cbx.AutoSize = true;
-            this.edit_kfel_cbx.Checked = true;
-            this.edit_kfel_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.edit_kfel_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.edit_kfel_cbx.Location = new System.Drawing.Point(86, 64);
-            this.edit_kfel_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.edit_kfel_cbx.Name = "edit_kfel_cbx";
-            this.edit_kfel_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edit_kfel_cbx.Size = new System.Drawing.Size(157, 33);
-            this.edit_kfel_cbx.TabIndex = 77;
-            this.edit_kfel_cbx.Text = "تعديل وحذف الكفلاء";
-            this.edit_kfel_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.edit_kfel_cbx.UseVisualStyleBackColor = true;
-            // 
-            // add_kfel_cbx
-            // 
-            this.add_kfel_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add_kfel_cbx.AutoSize = true;
-            this.add_kfel_cbx.Checked = true;
-            this.add_kfel_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.add_kfel_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.add_kfel_cbx.Location = new System.Drawing.Point(136, 31);
-            this.add_kfel_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.add_kfel_cbx.Name = "add_kfel_cbx";
-            this.add_kfel_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.add_kfel_cbx.Size = new System.Drawing.Size(107, 33);
-            this.add_kfel_cbx.TabIndex = 76;
-            this.add_kfel_cbx.Text = "إضافة كفيل";
-            this.add_kfel_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_kfel_cbx.UseVisualStyleBackColor = true;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.AppearanceCaption.BackColor = System.Drawing.Color.Lime;
-            this.groupControl1.AppearanceCaption.BackColor2 = System.Drawing.Color.Lime;
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl1.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl1.Controls.Add(this.company_kshf_7sab_cbx);
-            this.groupControl1.Controls.Add(this.company_tkset_cbx);
-            this.groupControl1.Controls.Add(this.edit_company_cbx);
-            this.groupControl1.Controls.Add(this.add_company_cbx);
-            this.groupControl1.Location = new System.Drawing.Point(676, 249);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(453, 109);
-            this.groupControl1.TabIndex = 16;
-            this.groupControl1.Text = "الشركات";
-            // 
-            // company_kshf_7sab_cbx
-            // 
-            this.company_kshf_7sab_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.company_kshf_7sab_cbx.AutoSize = true;
-            this.company_kshf_7sab_cbx.Checked = true;
-            this.company_kshf_7sab_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.company_kshf_7sab_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.company_kshf_7sab_cbx.Location = new System.Drawing.Point(82, 70);
-            this.company_kshf_7sab_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.company_kshf_7sab_cbx.Name = "company_kshf_7sab_cbx";
-            this.company_kshf_7sab_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.company_kshf_7sab_cbx.Size = new System.Drawing.Size(196, 33);
-            this.company_kshf_7sab_cbx.TabIndex = 72;
-            this.company_kshf_7sab_cbx.Text = "عرض كشف حساب الشركات";
-            this.company_kshf_7sab_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.company_kshf_7sab_cbx.UseVisualStyleBackColor = true;
-            // 
-            // company_tkset_cbx
-            // 
-            this.company_tkset_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.company_tkset_cbx.AutoSize = true;
-            this.company_tkset_cbx.Checked = true;
-            this.company_tkset_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.company_tkset_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.company_tkset_cbx.Location = new System.Drawing.Point(73, 33);
-            this.company_tkset_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.company_tkset_cbx.Name = "company_tkset_cbx";
-            this.company_tkset_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.company_tkset_cbx.Size = new System.Drawing.Size(205, 33);
-            this.company_tkset_cbx.TabIndex = 71;
-            this.company_tkset_cbx.Text = "قبض وعرض أقساط الشركات";
-            this.company_tkset_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.company_tkset_cbx.UseVisualStyleBackColor = true;
-            // 
-            // edit_company_cbx
-            // 
-            this.edit_company_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.edit_company_cbx.AutoSize = true;
-            this.edit_company_cbx.Checked = true;
-            this.edit_company_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.edit_company_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.edit_company_cbx.Location = new System.Drawing.Point(282, 70);
-            this.edit_company_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.edit_company_cbx.Name = "edit_company_cbx";
-            this.edit_company_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.edit_company_cbx.Size = new System.Drawing.Size(164, 33);
-            this.edit_company_cbx.TabIndex = 70;
-            this.edit_company_cbx.Text = "تعديل وحذف الشركات";
-            this.edit_company_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.edit_company_cbx.UseVisualStyleBackColor = true;
-            // 
-            // add_company_cbx
-            // 
-            this.add_company_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add_company_cbx.AutoSize = true;
-            this.add_company_cbx.Checked = true;
-            this.add_company_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.add_company_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.add_company_cbx.Location = new System.Drawing.Point(297, 33);
-            this.add_company_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.add_company_cbx.Name = "add_company_cbx";
-            this.add_company_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.add_company_cbx.Size = new System.Drawing.Size(149, 33);
-            this.add_company_cbx.TabIndex = 66;
-            this.add_company_cbx.Text = "إضافة شركة جديدة";
-            this.add_company_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.add_company_cbx.UseVisualStyleBackColor = true;
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // groupControl2
             // 
@@ -533,281 +113,354 @@
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl2.Controls.Add(this.eqrar_tax_cbx);
-            this.groupControl2.Controls.Add(this.account_rsed_report_cbx);
-            this.groupControl2.Controls.Add(this.mezan_morag3a_cbx);
-            this.groupControl2.Controls.Add(this.daily_qed_edit_cbx);
-            this.groupControl2.Controls.Add(this.tree_edit_cbx);
-            this.groupControl2.Controls.Add(this.tree_add_cbx);
-            this.groupControl2.Controls.Add(this.daily_qed_show_add_cbx);
-            this.groupControl2.Controls.Add(this.accounts_forwarding_cbx);
-            this.groupControl2.Controls.Add(this.daily_qed_report_cbx);
-            this.groupControl2.Location = new System.Drawing.Point(676, 5);
+            this.groupControl2.Controls.Add(this.manage_today_agle);
+            this.groupControl2.Controls.Add(this.snds_report);
+            this.groupControl2.Controls.Add(this.snd_srf);
+            this.groupControl2.Controls.Add(this.snd_qbd);
+            this.groupControl2.Controls.Add(this.storages_operations);
+            this.groupControl2.Controls.Add(this.save_btn);
+            this.groupControl2.Controls.Add(this.manage_storages);
+            this.groupControl2.Controls.Add(this.sales_report);
+            this.groupControl2.Controls.Add(this.manage_users_roles);
+            this.groupControl2.Controls.Add(this.manage_users);
+            this.groupControl2.Controls.Add(this.customers_mdeonee);
+            this.groupControl2.Controls.Add(this.customers_kshf_7sab);
+            this.groupControl2.Controls.Add(this.customers_paied_money);
+            this.groupControl2.Controls.Add(this.manage_customers);
+            this.groupControl2.Controls.Add(this.manage_daily_brief);
+            this.groupControl2.Controls.Add(this.manage_blackbox);
+            this.groupControl2.Controls.Add(this.manage_settings);
+            this.groupControl2.Controls.Add(this.manage_products);
+            this.groupControl2.Controls.Add(this.open_pos);
+            this.groupControl2.Controls.Add(this.manage_categories);
+            this.groupControl2.Location = new System.Drawing.Point(3, 40);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(453, 241);
-            this.groupControl2.TabIndex = 15;
-            this.groupControl2.Text = "المحاسبة والضرائب";
+            this.groupControl2.Size = new System.Drawing.Size(596, 357);
+            this.groupControl2.TabIndex = 16;
+            this.groupControl2.Text = "الصلاحيات";
             // 
-            // eqrar_tax_cbx
+            // manage_today_agle
             // 
-            this.eqrar_tax_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.eqrar_tax_cbx.AutoSize = true;
-            this.eqrar_tax_cbx.Checked = true;
-            this.eqrar_tax_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.eqrar_tax_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.eqrar_tax_cbx.Location = new System.Drawing.Point(284, 172);
-            this.eqrar_tax_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.eqrar_tax_cbx.Name = "eqrar_tax_cbx";
-            this.eqrar_tax_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.eqrar_tax_cbx.Size = new System.Drawing.Size(157, 33);
-            this.eqrar_tax_cbx.TabIndex = 75;
-            this.eqrar_tax_cbx.Text = "عرض الإقرار الضريبي";
-            this.eqrar_tax_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.eqrar_tax_cbx.UseVisualStyleBackColor = true;
+            this.manage_today_agle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_today_agle.AutoSize = true;
+            this.manage_today_agle.Checked = true;
+            this.manage_today_agle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_today_agle.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_today_agle.Location = new System.Drawing.Point(238, 269);
+            this.manage_today_agle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_today_agle.Name = "manage_today_agle";
+            this.manage_today_agle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_today_agle.Size = new System.Drawing.Size(178, 33);
+            this.manage_today_agle.TabIndex = 90;
+            this.manage_today_agle.Text = "شاشة الديون المستحقة";
+            this.manage_today_agle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_today_agle.UseVisualStyleBackColor = true;
             // 
-            // account_rsed_report_cbx
+            // snds_report
             // 
-            this.account_rsed_report_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.account_rsed_report_cbx.AutoSize = true;
-            this.account_rsed_report_cbx.Checked = true;
-            this.account_rsed_report_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.account_rsed_report_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.account_rsed_report_cbx.Location = new System.Drawing.Point(287, 207);
-            this.account_rsed_report_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.account_rsed_report_cbx.Name = "account_rsed_report_cbx";
-            this.account_rsed_report_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.account_rsed_report_cbx.Size = new System.Drawing.Size(154, 33);
-            this.account_rsed_report_cbx.TabIndex = 67;
-            this.account_rsed_report_cbx.Text = "عرض رصيد الحسابات";
-            this.account_rsed_report_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.account_rsed_report_cbx.UseVisualStyleBackColor = true;
+            this.snds_report.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.snds_report.AutoSize = true;
+            this.snds_report.Checked = true;
+            this.snds_report.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.snds_report.Font = new System.Drawing.Font("Cairo", 11F);
+            this.snds_report.Location = new System.Drawing.Point(27, 104);
+            this.snds_report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.snds_report.Name = "snds_report";
+            this.snds_report.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.snds_report.Size = new System.Drawing.Size(156, 33);
+            this.snds_report.TabIndex = 89;
+            this.snds_report.Text = "شاشة تقرير السندات";
+            this.snds_report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.snds_report.UseVisualStyleBackColor = true;
             // 
-            // mezan_morag3a_cbx
+            // snd_srf
             // 
-            this.mezan_morag3a_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mezan_morag3a_cbx.AutoSize = true;
-            this.mezan_morag3a_cbx.Checked = true;
-            this.mezan_morag3a_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mezan_morag3a_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.mezan_morag3a_cbx.Location = new System.Drawing.Point(283, 137);
-            this.mezan_morag3a_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mezan_morag3a_cbx.Name = "mezan_morag3a_cbx";
-            this.mezan_morag3a_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.mezan_morag3a_cbx.Size = new System.Drawing.Size(158, 33);
-            this.mezan_morag3a_cbx.TabIndex = 74;
-            this.mezan_morag3a_cbx.Text = "عرض ميزان المراجعة";
-            this.mezan_morag3a_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mezan_morag3a_cbx.UseVisualStyleBackColor = true;
+            this.snd_srf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.snd_srf.AutoSize = true;
+            this.snd_srf.Checked = true;
+            this.snd_srf.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.snd_srf.Font = new System.Drawing.Font("Cairo", 11F);
+            this.snd_srf.Location = new System.Drawing.Point(50, 71);
+            this.snd_srf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.snd_srf.Name = "snd_srf";
+            this.snd_srf.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.snd_srf.Size = new System.Drawing.Size(133, 33);
+            this.snd_srf.TabIndex = 88;
+            this.snd_srf.Text = "شاشة سند صرف";
+            this.snd_srf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.snd_srf.UseVisualStyleBackColor = true;
             // 
-            // daily_qed_edit_cbx
+            // snd_qbd
             // 
-            this.daily_qed_edit_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.daily_qed_edit_cbx.AutoSize = true;
-            this.daily_qed_edit_cbx.Checked = true;
-            this.daily_qed_edit_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.daily_qed_edit_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.daily_qed_edit_cbx.Location = new System.Drawing.Point(279, 67);
-            this.daily_qed_edit_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.daily_qed_edit_cbx.Name = "daily_qed_edit_cbx";
-            this.daily_qed_edit_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.daily_qed_edit_cbx.Size = new System.Drawing.Size(162, 33);
-            this.daily_qed_edit_cbx.TabIndex = 72;
-            this.daily_qed_edit_cbx.Text = "تعديل القيود اليومية";
-            this.daily_qed_edit_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.daily_qed_edit_cbx.UseVisualStyleBackColor = true;
+            this.snd_qbd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.snd_qbd.AutoSize = true;
+            this.snd_qbd.Checked = true;
+            this.snd_qbd.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.snd_qbd.Font = new System.Drawing.Font("Cairo", 11F);
+            this.snd_qbd.Location = new System.Drawing.Point(49, 38);
+            this.snd_qbd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.snd_qbd.Name = "snd_qbd";
+            this.snd_qbd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.snd_qbd.Size = new System.Drawing.Size(134, 33);
+            this.snd_qbd.TabIndex = 87;
+            this.snd_qbd.Text = "شاشة سند قبض";
+            this.snd_qbd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.snd_qbd.UseVisualStyleBackColor = true;
             // 
-            // tree_edit_cbx
+            // storages_operations
             // 
-            this.tree_edit_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tree_edit_cbx.AutoSize = true;
-            this.tree_edit_cbx.Checked = true;
-            this.tree_edit_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tree_edit_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.tree_edit_cbx.Location = new System.Drawing.Point(1, 106);
-            this.tree_edit_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tree_edit_cbx.Name = "tree_edit_cbx";
-            this.tree_edit_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tree_edit_cbx.Size = new System.Drawing.Size(229, 33);
-            this.tree_edit_cbx.TabIndex = 70;
-            this.tree_edit_cbx.Text = "تعديل حساب في شجرة الحسابات";
-            this.tree_edit_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tree_edit_cbx.UseVisualStyleBackColor = true;
+            this.storages_operations.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.storages_operations.AutoSize = true;
+            this.storages_operations.Checked = true;
+            this.storages_operations.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.storages_operations.Font = new System.Drawing.Font("Cairo", 11F);
+            this.storages_operations.Location = new System.Drawing.Point(215, 236);
+            this.storages_operations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.storages_operations.Name = "storages_operations";
+            this.storages_operations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.storages_operations.Size = new System.Drawing.Size(201, 33);
+            this.storages_operations.TabIndex = 86;
+            this.storages_operations.Text = "شاشة العمليات على الخزنات";
+            this.storages_operations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.storages_operations.UseVisualStyleBackColor = true;
             // 
-            // tree_add_cbx
+            // manage_storages
             // 
-            this.tree_add_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tree_add_cbx.AutoSize = true;
-            this.tree_add_cbx.Checked = true;
-            this.tree_add_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tree_add_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.tree_add_cbx.Location = new System.Drawing.Point(1, 69);
-            this.tree_add_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tree_add_cbx.Name = "tree_add_cbx";
-            this.tree_add_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tree_add_cbx.Size = new System.Drawing.Size(229, 33);
-            this.tree_add_cbx.TabIndex = 69;
-            this.tree_add_cbx.Text = "إضافة حساب إلى شجرة الحسابات";
-            this.tree_add_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tree_add_cbx.UseVisualStyleBackColor = true;
+            this.manage_storages.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_storages.AutoSize = true;
+            this.manage_storages.Checked = true;
+            this.manage_storages.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_storages.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_storages.Location = new System.Drawing.Point(472, 269);
+            this.manage_storages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_storages.Name = "manage_storages";
+            this.manage_storages.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_storages.Size = new System.Drawing.Size(115, 33);
+            this.manage_storages.TabIndex = 84;
+            this.manage_storages.Text = "شاشة الخزنات";
+            this.manage_storages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_storages.UseVisualStyleBackColor = true;
             // 
-            // daily_qed_show_add_cbx
+            // sales_report
             // 
-            this.daily_qed_show_add_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.daily_qed_show_add_cbx.AutoSize = true;
-            this.daily_qed_show_add_cbx.Checked = true;
-            this.daily_qed_show_add_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.daily_qed_show_add_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.daily_qed_show_add_cbx.Location = new System.Drawing.Point(236, 32);
-            this.daily_qed_show_add_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.daily_qed_show_add_cbx.Name = "daily_qed_show_add_cbx";
-            this.daily_qed_show_add_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.daily_qed_show_add_cbx.Size = new System.Drawing.Size(205, 33);
-            this.daily_qed_show_add_cbx.TabIndex = 71;
-            this.daily_qed_show_add_cbx.Text = "عرض وإضافة القيود اليومية";
-            this.daily_qed_show_add_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.daily_qed_show_add_cbx.UseVisualStyleBackColor = true;
+            this.sales_report.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sales_report.AutoSize = true;
+            this.sales_report.Checked = true;
+            this.sales_report.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.sales_report.Font = new System.Drawing.Font("Cairo", 11F);
+            this.sales_report.Location = new System.Drawing.Point(256, 203);
+            this.sales_report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sales_report.Name = "sales_report";
+            this.sales_report.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.sales_report.Size = new System.Drawing.Size(160, 33);
+            this.sales_report.TabIndex = 83;
+            this.sales_report.Text = "شاشة تقرير المبيعات";
+            this.sales_report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sales_report.UseVisualStyleBackColor = true;
             // 
-            // accounts_forwarding_cbx
+            // manage_users_roles
             // 
-            this.accounts_forwarding_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.accounts_forwarding_cbx.AutoSize = true;
-            this.accounts_forwarding_cbx.Checked = true;
-            this.accounts_forwarding_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.accounts_forwarding_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.accounts_forwarding_cbx.Location = new System.Drawing.Point(22, 32);
-            this.accounts_forwarding_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.accounts_forwarding_cbx.Name = "accounts_forwarding_cbx";
-            this.accounts_forwarding_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.accounts_forwarding_cbx.Size = new System.Drawing.Size(208, 33);
-            this.accounts_forwarding_cbx.TabIndex = 68;
-            this.accounts_forwarding_cbx.Text = "عرض وتعديل توجيه الحسابات";
-            this.accounts_forwarding_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.accounts_forwarding_cbx.UseVisualStyleBackColor = true;
+            this.manage_users_roles.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_users_roles.AutoSize = true;
+            this.manage_users_roles.Checked = true;
+            this.manage_users_roles.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_users_roles.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_users_roles.Location = new System.Drawing.Point(211, 170);
+            this.manage_users_roles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_users_roles.Name = "manage_users_roles";
+            this.manage_users_roles.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_users_roles.Size = new System.Drawing.Size(205, 33);
+            this.manage_users_roles.TabIndex = 82;
+            this.manage_users_roles.Text = "شاشة صلاحيات المستخدمين";
+            this.manage_users_roles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_users_roles.UseVisualStyleBackColor = true;
             // 
-            // daily_qed_report_cbx
+            // manage_users
             // 
-            this.daily_qed_report_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.daily_qed_report_cbx.AutoSize = true;
-            this.daily_qed_report_cbx.Checked = true;
-            this.daily_qed_report_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.daily_qed_report_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.daily_qed_report_cbx.Location = new System.Drawing.Point(251, 102);
-            this.daily_qed_report_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.daily_qed_report_cbx.Name = "daily_qed_report_cbx";
-            this.daily_qed_report_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.daily_qed_report_cbx.Size = new System.Drawing.Size(190, 33);
-            this.daily_qed_report_cbx.TabIndex = 73;
-            this.daily_qed_report_cbx.Text = "عرض تقرير القيود اليومية";
-            this.daily_qed_report_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.daily_qed_report_cbx.UseVisualStyleBackColor = true;
+            this.manage_users.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_users.AutoSize = true;
+            this.manage_users.Checked = true;
+            this.manage_users.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_users.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_users.Location = new System.Drawing.Point(264, 137);
+            this.manage_users.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_users.Name = "manage_users";
+            this.manage_users.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_users.Size = new System.Drawing.Size(152, 33);
+            this.manage_users.TabIndex = 81;
+            this.manage_users.Text = "شاشة المستخدمين";
+            this.manage_users.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_users.UseVisualStyleBackColor = true;
             // 
-            // groupControl5
+            // customers_mdeonee
             // 
-            this.groupControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl5.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupControl5.Appearance.Options.UseBackColor = true;
-            this.groupControl5.AppearanceCaption.BackColor = System.Drawing.Color.Lime;
-            this.groupControl5.AppearanceCaption.BackColor2 = System.Drawing.Color.Lime;
-            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl5.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl5.AppearanceCaption.Options.UseBackColor = true;
-            this.groupControl5.AppearanceCaption.Options.UseFont = true;
-            this.groupControl5.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupControl5.Controls.Add(this.buy_archive_cbx);
-            this.groupControl5.Controls.Add(this.sell_archive_cbx);
-            this.groupControl5.Controls.Add(this.snd_qbd_archive_cbx);
-            this.groupControl5.Controls.Add(this.snd_srf_archive_cbx);
-            this.groupControl5.Location = new System.Drawing.Point(263, 249);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(410, 109);
-            this.groupControl5.TabIndex = 15;
-            this.groupControl5.Text = "الأرشيف";
+            this.customers_mdeonee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customers_mdeonee.AutoSize = true;
+            this.customers_mdeonee.Checked = true;
+            this.customers_mdeonee.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.customers_mdeonee.Font = new System.Drawing.Font("Cairo", 11F);
+            this.customers_mdeonee.Location = new System.Drawing.Point(267, 71);
+            this.customers_mdeonee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customers_mdeonee.Name = "customers_mdeonee";
+            this.customers_mdeonee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.customers_mdeonee.Size = new System.Drawing.Size(149, 33);
+            this.customers_mdeonee.TabIndex = 79;
+            this.customers_mdeonee.Text = "شاشة ديون العملاء";
+            this.customers_mdeonee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customers_mdeonee.UseVisualStyleBackColor = true;
             // 
-            // buy_archive_cbx
+            // customers_kshf_7sab
             // 
-            this.buy_archive_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buy_archive_cbx.AutoSize = true;
-            this.buy_archive_cbx.Checked = true;
-            this.buy_archive_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.buy_archive_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.buy_archive_cbx.Location = new System.Drawing.Point(231, 66);
-            this.buy_archive_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buy_archive_cbx.Name = "buy_archive_cbx";
-            this.buy_archive_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buy_archive_cbx.Size = new System.Drawing.Size(174, 33);
-            this.buy_archive_cbx.TabIndex = 82;
-            this.buy_archive_cbx.Text = "عرض أرشيف المشتريات";
-            this.buy_archive_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buy_archive_cbx.UseVisualStyleBackColor = true;
+            this.customers_kshf_7sab.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customers_kshf_7sab.AutoSize = true;
+            this.customers_kshf_7sab.Checked = true;
+            this.customers_kshf_7sab.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.customers_kshf_7sab.Font = new System.Drawing.Font("Cairo", 11F);
+            this.customers_kshf_7sab.Location = new System.Drawing.Point(231, 38);
+            this.customers_kshf_7sab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customers_kshf_7sab.Name = "customers_kshf_7sab";
+            this.customers_kshf_7sab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.customers_kshf_7sab.Size = new System.Drawing.Size(185, 33);
+            this.customers_kshf_7sab.TabIndex = 78;
+            this.customers_kshf_7sab.Text = "شاشة كشف حساب عميل";
+            this.customers_kshf_7sab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customers_kshf_7sab.UseVisualStyleBackColor = true;
             // 
-            // sell_archive_cbx
+            // customers_paied_money
             // 
-            this.sell_archive_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.sell_archive_cbx.AutoSize = true;
-            this.sell_archive_cbx.Checked = true;
-            this.sell_archive_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.sell_archive_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.sell_archive_cbx.Location = new System.Drawing.Point(38, 66);
-            this.sell_archive_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sell_archive_cbx.Name = "sell_archive_cbx";
-            this.sell_archive_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.sell_archive_cbx.Size = new System.Drawing.Size(165, 33);
-            this.sell_archive_cbx.TabIndex = 83;
-            this.sell_archive_cbx.Text = "عرض أرشيف المبيعات";
-            this.sell_archive_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.sell_archive_cbx.UseVisualStyleBackColor = true;
+            this.customers_paied_money.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customers_paied_money.AutoSize = true;
+            this.customers_paied_money.Checked = true;
+            this.customers_paied_money.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.customers_paied_money.Font = new System.Drawing.Font("Cairo", 11F);
+            this.customers_paied_money.Location = new System.Drawing.Point(205, 104);
+            this.customers_paied_money.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customers_paied_money.Name = "customers_paied_money";
+            this.customers_paied_money.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.customers_paied_money.Size = new System.Drawing.Size(211, 33);
+            this.customers_paied_money.TabIndex = 80;
+            this.customers_paied_money.Text = "شاشة المقبوضات من العملاء";
+            this.customers_paied_money.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customers_paied_money.UseVisualStyleBackColor = true;
             // 
-            // snd_qbd_archive_cbx
+            // manage_customers
             // 
-            this.snd_qbd_archive_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.snd_qbd_archive_cbx.AutoSize = true;
-            this.snd_qbd_archive_cbx.Checked = true;
-            this.snd_qbd_archive_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.snd_qbd_archive_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.snd_qbd_archive_cbx.Location = new System.Drawing.Point(209, 29);
-            this.snd_qbd_archive_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.snd_qbd_archive_cbx.Name = "snd_qbd_archive_cbx";
-            this.snd_qbd_archive_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.snd_qbd_archive_cbx.Size = new System.Drawing.Size(196, 33);
-            this.snd_qbd_archive_cbx.TabIndex = 84;
-            this.snd_qbd_archive_cbx.Text = "عرض أرشيف سندات القبض";
-            this.snd_qbd_archive_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.snd_qbd_archive_cbx.UseVisualStyleBackColor = true;
+            this.manage_customers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_customers.AutoSize = true;
+            this.manage_customers.Checked = true;
+            this.manage_customers.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_customers.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_customers.Location = new System.Drawing.Point(471, 236);
+            this.manage_customers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_customers.Name = "manage_customers";
+            this.manage_customers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_customers.Size = new System.Drawing.Size(116, 33);
+            this.manage_customers.TabIndex = 77;
+            this.manage_customers.Text = "شاشة العملاء";
+            this.manage_customers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_customers.UseVisualStyleBackColor = true;
             // 
-            // snd_srf_archive_cbx
+            // manage_daily_brief
             // 
-            this.snd_srf_archive_cbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.snd_srf_archive_cbx.AutoSize = true;
-            this.snd_srf_archive_cbx.Checked = true;
-            this.snd_srf_archive_cbx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.snd_srf_archive_cbx.Font = new System.Drawing.Font("Cairo", 11F);
-            this.snd_srf_archive_cbx.Location = new System.Drawing.Point(8, 29);
-            this.snd_srf_archive_cbx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.snd_srf_archive_cbx.Name = "snd_srf_archive_cbx";
-            this.snd_srf_archive_cbx.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.snd_srf_archive_cbx.Size = new System.Drawing.Size(195, 33);
-            this.snd_srf_archive_cbx.TabIndex = 85;
-            this.snd_srf_archive_cbx.Text = "عرض أرشيف سندات الصرف";
-            this.snd_srf_archive_cbx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.snd_srf_archive_cbx.UseVisualStyleBackColor = true;
+            this.manage_daily_brief.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_daily_brief.AutoSize = true;
+            this.manage_daily_brief.Checked = true;
+            this.manage_daily_brief.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_daily_brief.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_daily_brief.Location = new System.Drawing.Point(415, 203);
+            this.manage_daily_brief.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_daily_brief.Name = "manage_daily_brief";
+            this.manage_daily_brief.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_daily_brief.Size = new System.Drawing.Size(172, 33);
+            this.manage_daily_brief.TabIndex = 76;
+            this.manage_daily_brief.Text = "شاشة الملخص اليومي";
+            this.manage_daily_brief.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_daily_brief.UseVisualStyleBackColor = true;
             // 
-            // save_btn
+            // manage_blackbox
             // 
-            this.save_btn.Appearance.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
-            this.save_btn.Appearance.Options.UseFont = true;
-            this.save_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_save;
-            this.save_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.save_btn.Location = new System.Drawing.Point(459, 448);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(212, 45);
-            this.save_btn.TabIndex = 1;
-            this.save_btn.Text = "حفظ";
-            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            this.manage_blackbox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_blackbox.AutoSize = true;
+            this.manage_blackbox.Checked = true;
+            this.manage_blackbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_blackbox.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_blackbox.Location = new System.Drawing.Point(416, 170);
+            this.manage_blackbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_blackbox.Name = "manage_blackbox";
+            this.manage_blackbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_blackbox.Size = new System.Drawing.Size(171, 33);
+            this.manage_blackbox.TabIndex = 75;
+            this.manage_blackbox.Text = "شاشة الصندوق الأسود";
+            this.manage_blackbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_blackbox.UseVisualStyleBackColor = true;
             // 
-            // backgroundWorker1
+            // manage_settings
             // 
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            this.manage_settings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_settings.AutoSize = true;
+            this.manage_settings.Checked = true;
+            this.manage_settings.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_settings.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_settings.Location = new System.Drawing.Point(460, 137);
+            this.manage_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_settings.Name = "manage_settings";
+            this.manage_settings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_settings.Size = new System.Drawing.Size(127, 33);
+            this.manage_settings.TabIndex = 74;
+            this.manage_settings.Text = "شاشة الأعدادات";
+            this.manage_settings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_settings.UseVisualStyleBackColor = true;
+            // 
+            // manage_products
+            // 
+            this.manage_products.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_products.AutoSize = true;
+            this.manage_products.Checked = true;
+            this.manage_products.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_products.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_products.Location = new System.Drawing.Point(465, 71);
+            this.manage_products.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_products.Name = "manage_products";
+            this.manage_products.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_products.Size = new System.Drawing.Size(122, 33);
+            this.manage_products.TabIndex = 72;
+            this.manage_products.Text = "شاشة الخدمات";
+            this.manage_products.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_products.UseVisualStyleBackColor = true;
+            // 
+            // open_pos
+            // 
+            this.open_pos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.open_pos.AutoSize = true;
+            this.open_pos.Checked = true;
+            this.open_pos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.open_pos.Font = new System.Drawing.Font("Cairo", 11F);
+            this.open_pos.Location = new System.Drawing.Point(476, 38);
+            this.open_pos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.open_pos.Name = "open_pos";
+            this.open_pos.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.open_pos.Size = new System.Drawing.Size(111, 33);
+            this.open_pos.TabIndex = 71;
+            this.open_pos.Text = "شاشة الحلاق";
+            this.open_pos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.open_pos.UseVisualStyleBackColor = true;
+            // 
+            // manage_categories
+            // 
+            this.manage_categories.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.manage_categories.AutoSize = true;
+            this.manage_categories.Checked = true;
+            this.manage_categories.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.manage_categories.Font = new System.Drawing.Font("Cairo", 11F);
+            this.manage_categories.Location = new System.Drawing.Point(453, 104);
+            this.manage_categories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.manage_categories.Name = "manage_categories";
+            this.manage_categories.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.manage_categories.Size = new System.Drawing.Size(134, 33);
+            this.manage_categories.TabIndex = 73;
+            this.manage_categories.Text = "شاشة التصنيفات";
+            this.manage_categories.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.manage_categories.UseVisualStyleBackColor = true;
             // 
             // ar_user_permissions_form
             // 
@@ -815,9 +468,8 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 496);
-            this.Controls.Add(this.save_btn);
-            this.Controls.Add(this.tabPane1);
+            this.ClientSize = new System.Drawing.Size(601, 399);
+            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.MaximizeBox = false;
             this.Name = "ar_user_permissions_form";
@@ -826,27 +478,9 @@
             this.Load += new System.EventHandler(this.ar_user_permissions_form_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
-            this.tabPane1.ResumeLayout(false);
-            this.tabNavigationPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl12)).EndInit();
-            this.groupControl12.ResumeLayout(false);
-            this.groupControl12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
-            this.groupControl9.ResumeLayout(false);
-            this.groupControl9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-            this.groupControl5.ResumeLayout(false);
-            this.groupControl5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -854,45 +488,28 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private DevExpress.XtraBars.Navigation.TabPane tabPane1;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage1;
         private DevExpress.XtraEditors.SimpleButton save_btn;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.CheckBox eqrar_tax_cbx;
-        private System.Windows.Forms.CheckBox mezan_morag3a_cbx;
-        private System.Windows.Forms.CheckBox account_rsed_report_cbx;
-        private System.Windows.Forms.CheckBox accounts_forwarding_cbx;
-        private System.Windows.Forms.CheckBox daily_qed_report_cbx;
-        private System.Windows.Forms.CheckBox tree_add_cbx;
-        private System.Windows.Forms.CheckBox daily_qed_edit_cbx;
-        private System.Windows.Forms.CheckBox tree_edit_cbx;
-        private System.Windows.Forms.CheckBox daily_qed_show_add_cbx;
-        private DevExpress.XtraEditors.GroupControl groupControl5;
-        private System.Windows.Forms.CheckBox buy_archive_cbx;
-        private System.Windows.Forms.CheckBox sell_archive_cbx;
-        private System.Windows.Forms.CheckBox snd_qbd_archive_cbx;
-        private System.Windows.Forms.CheckBox snd_srf_archive_cbx;
-        private DevExpress.XtraEditors.GroupControl groupControl12;
-        private System.Windows.Forms.CheckBox add_selfa_cut_cbx;
-        private System.Windows.Forms.CheckBox salary_report_cbx;
-        private System.Windows.Forms.CheckBox salary_give_cbx;
-        private System.Windows.Forms.CheckBox edit_employee_cbx;
-        private System.Windows.Forms.CheckBox add_employee_cbx;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         public System.Windows.Forms.Label top_label;
-        private System.Windows.Forms.CheckBox show_reports_cbx;
-        private System.Windows.Forms.CheckBox login_logout_cbx;
-        private System.Windows.Forms.CheckBox add_kfel_cbx;
-        private System.Windows.Forms.CheckBox edit_kfel_cbx;
-        private DevExpress.XtraEditors.GroupControl groupControl4;
-        private System.Windows.Forms.CheckBox show_snds_report_cbx;
-        private System.Windows.Forms.CheckBox add_snd_srf_cbx;
-        private System.Windows.Forms.CheckBox edit_snd_srf_cbx;
-        private DevExpress.XtraEditors.GroupControl groupControl9;
-        private System.Windows.Forms.CheckBox edit_company_cbx;
-        private System.Windows.Forms.CheckBox add_company_cbx;
-        private System.Windows.Forms.CheckBox company_kshf_7sab_cbx;
-        private System.Windows.Forms.CheckBox company_tkset_cbx;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.CheckBox manage_blackbox;
+        private System.Windows.Forms.CheckBox manage_settings;
+        private System.Windows.Forms.CheckBox manage_products;
+        private System.Windows.Forms.CheckBox open_pos;
+        private System.Windows.Forms.CheckBox manage_categories;
+        private System.Windows.Forms.CheckBox manage_customers;
+        private System.Windows.Forms.CheckBox manage_daily_brief;
+        private System.Windows.Forms.CheckBox manage_storages;
+        private System.Windows.Forms.CheckBox sales_report;
+        private System.Windows.Forms.CheckBox manage_users_roles;
+        private System.Windows.Forms.CheckBox manage_users;
+        private System.Windows.Forms.CheckBox customers_mdeonee;
+        private System.Windows.Forms.CheckBox customers_kshf_7sab;
+        private System.Windows.Forms.CheckBox customers_paied_money;
+        private System.Windows.Forms.CheckBox storages_operations;
+        private System.Windows.Forms.CheckBox manage_today_agle;
+        private System.Windows.Forms.CheckBox snds_report;
+        private System.Windows.Forms.CheckBox snd_srf;
+        private System.Windows.Forms.CheckBox snd_qbd;
     }
 }

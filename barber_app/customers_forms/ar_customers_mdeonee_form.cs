@@ -41,7 +41,7 @@ namespace barber_app.customers_forms
 
         private void ar_customers_mdeonee_form_Load(object sender, EventArgs e)
         {
-            DataTable table = connection_class.select("select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع' from agle_table where 1=2");
+            DataTable table = connection_class.select("select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع' from agle_table where 1=2");
             my_grid_view_class.set_datasource(gridControl1, gridView1, table);
             if (customer_worker.IsBusy == false)
             {
@@ -60,8 +60,7 @@ namespace barber_app.customers_forms
             {
                 from_date = first_date.DateTime.ToString("dd-MM-yyyy");
                 to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-                //TODO
-                //repost_pos.customers_mdeonea_report.to_word(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+                repost_pos.customers_mdeonea_report.to_word(classes.my_grid_view_class.gridview_to_data_table(gridView1));
             }
         }
 
@@ -76,8 +75,7 @@ namespace barber_app.customers_forms
             {
                 from_date = first_date.DateTime.ToString("dd-MM-yyyy");
                 to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-                //TODO
-                //repost_pos.customers_mdeonea_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+                repost_pos.customers_mdeonea_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(gridView1));
             }
         }
 
@@ -92,20 +90,19 @@ namespace barber_app.customers_forms
             {
                 from_date = first_date.DateTime.ToString("dd-MM-yyyy");
                 to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-                //TODO
-                //repost_pos.customers_mdeonea_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+                repost_pos.customers_mdeonea_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(gridView1));
             }
         }
 
         private void show_report_btn_Click(object sender, EventArgs e)
         {
-            DataTable CustomerIDTable = connection_class.select($"select customer_id from customers_table where customer_name=N'{customer_cb.Text}'");
+            DataTable CustomerIDTable = connection_class.select($"select customer_id from customers_table where customer_name='{customer_cb.Text}'");
             int customerID = 0;
             if (CustomerIDTable.Rows.Count != 0)
             {
                 customerID = Convert.ToInt32(CustomerIDTable.Rows[0][0]);
             }
-            DataTable UserIDTable = connection_class.select($"select user_id from users_table where username=N'{username_cb.Text}'");
+            DataTable UserIDTable = connection_class.select($"select user_id from users_table where username='{username_cb.Text}'");
             int userID = 0;
             if (UserIDTable.Rows.Count != 0)
             {
@@ -121,27 +118,27 @@ namespace barber_app.customers_forms
             // customer
             if (customer_checkbox.Checked && date_checkbox.Checked == false && username_cbx.Checked == false)
             {
-                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع' from agle_table where customer_id={customerID}");
+                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع' from agle_table where customer_id={customerID}");
             }
             // date
             if (date_checkbox.Checked && customer_checkbox.Checked == false && username_cbx.Checked == false)
             {
-                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع'  from agle_table where sell_date between convert(date,'{f}',105) and convert(date,'{l}',105)");
+                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع'  from agle_table where sell_date between '{f}' and '{l}'");
             }
             // username
             if (username_cbx.Checked && date_checkbox.Checked == false && customer_checkbox.Checked == false)
             {
-                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع' from agle_table where fatora_id in (select fatora_id from sell_head_table where user_id={userID})");
+                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع' from agle_table where fatora_id in (select fatora_id from sell_head_table where user_id={userID})");
             }
             // customer and username
             if (customer_checkbox.Checked && date_checkbox.Checked == false && username_cbx.Checked)
             {
-                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع' from agle_table where customer_id={customerID} and fatora_id in (select fatora_id from sell_head_table where user_id={userID})");
+                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع' from agle_table where customer_id={customerID} and fatora_id in (select fatora_id from sell_head_table where user_id={userID})");
             }
             // date and customer
             if (date_checkbox.Checked && customer_checkbox.Checked && username_cbx.Checked == false)
             {
-                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',convert(nvarchar,sell_date,105) as 'تاريخ البيع'  from agle_table where customer_id={customerID} and sell_date between convert(date,'{f}',105) and convert(date,'{l}',105)");
+                table = connection_class.select($"select agl_id as 'الرمز',fatora_id as 'رقم الفاتورة',(select customer_name from customers_table where customers_table.customer_id=agle_table.customer_id) as 'العميل',full_money as 'المبلغ الكامل',how_pay as 'المدفوع',how_stay as 'الباقي',sell_date as 'تاريخ البيع'  from agle_table where customer_id={customerID} and sell_date between '{f}' and '{l}'");
             }
             my_grid_view_class.set_datasource(gridControl1, gridView1, table);
             my_grid_view_class.set_summary(gridView1, "المدفوع");
@@ -259,7 +256,7 @@ namespace barber_app.customers_forms
                             agl_id = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[0]));
                             fatora_id = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns[1]));
                             customer_name = gridView1.GetRowCellValue(i, gridView1.Columns[2]).ToString();
-                            DataTable customerIDTable = connection_class.select($"select customer_id from customers_table where customer_name=N'{customer_name}'");
+                            DataTable customerIDTable = connection_class.select($"select customer_id from customers_table where customer_name='{customer_name}'");
                             int customerID = 0;
                             if (customerIDTable.Rows.Count != 0)
                             {
@@ -269,12 +266,12 @@ namespace barber_app.customers_forms
                             the_fatora_numbers += agl_id.ToString() + ",";
                             full_value += value;
                             connection_class.command($"update agle_table set how_stay=0,ok=1 where agl_id={agl_id}");
-                            connection_class.command($"insert into customers_paied_money_table values ({fatora_id},{agl_id},N'{customerID}',{value},N'{the_date}',N'{userID}')");
+                            connection_class.command($"insert into customers_paied_money_table values ({fatora_id},{agl_id},'{customerID}',{value},'{the_date}','{userID}')");
                             classes.add_kshf_class.customer_kshf(customer_name, $"قبض مستحقات برقم ( {agl_id} )", value * -1);
                             classes.aol_moda_class.update_customer_aol_moda(customer_name, value * -1);
                             connection_class.command("delete from agle_table where how_stay=0");
                             logs_class.log_add($"قبض مديونية من العملاء للفاتورة ذات الرقم {fatora_id}", 0, "العملاء");
-                            storage_class.storage_log_add($"قبض مديونية من العميل {customer_name} برقم {agl_id}", value, settings_files.main_settings.Default.storage_name);
+                            storage_class.storage_log_add($"قبض مديونية من العميل {customer_name} برقم {agl_id}", value, settings_files.main_settings.Default.storage_id);
                         }
                         storage_class.storage_value_increase(full_value);
                         DialogResult dr2 = classes.notifications_class.my_messageBox("تم قبض المديونيات بنجاح\nهل تريد طباعة سند القبض ؟", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -287,8 +284,7 @@ namespace barber_app.customers_forms
                             the_name = customer_name;
                             date_time = DateTime.Now.ToString("dd-MM-yyyy") + " | " + DateTime.Now.ToString("HH:mm");
                             the_money = full_value.ToString();
-                            //TODO
-                            //repost_pos.snd_kbd_report.print(null, null);
+                            repost_pos.snd_kbd_report.print(null, null);
                             the_fatora_numbers = the_name = "";
                             full_value = 0;
                         }
@@ -332,7 +328,7 @@ namespace barber_app.customers_forms
                             fatora_id = Convert.ToInt32(gridView1.GetRowCellValue(n, gridView1.Columns[1]));
                             agl_id = Convert.ToInt32(gridView1.GetRowCellValue(n, gridView1.Columns[0]));
                             customer_name = gridView1.GetRowCellValue(n, gridView1.Columns[2]).ToString();
-                            DataTable customerIDTable = connection_class.select($"select customer_id from customers_table where customer_name=N'{customer_name}'");
+                            DataTable customerIDTable = connection_class.select($"select customer_id from customers_table where customer_name='{customer_name}'");
                             int customerID = 0;
                             if (customerIDTable.Rows.Count != 0)
                             {
@@ -341,12 +337,12 @@ namespace barber_app.customers_forms
                             the_fatora_numbers += agl_id.ToString() + ",";
                             connection_class.command($"update agle_table set how_stay=how_stay-{value} where agl_id={agl_id}");
                             connection_class.command($"update agle_table set how_pay=full_money-how_stay where agl_id={agl_id}");
-                            connection_class.command($"insert into customers_paied_money_table values ({fatora_id},{agl_id},N'{customerID}',{value},N'{the_date}',N'{userID}')");
+                            connection_class.command($"insert into customers_paied_money_table values ({fatora_id},{agl_id},'{customerID}',{value},'{the_date}','{userID}')");
                             connection_class.command("delete from agle_table where how_stay=0");
                             classes.add_kshf_class.customer_kshf(customer_name, $"قبض مستحقات برقم ( {agl_id} )", value * -1);
                             classes.aol_moda_class.update_customer_aol_moda(customer_name, value * -1);
                             logs_class.log_add($"قبض مديونية من العملاء للفاتورة ذات الرقم {fatora_id}", 0, "العملاء");
-                            storage_class.storage_log_add($"قبض مديونية من العميل {customer_name} برقم {agl_id}", value, settings_files.main_settings.Default.storage_name);
+                            storage_class.storage_log_add($"قبض مديونية من العميل {customer_name} برقم {agl_id}", value, settings_files.main_settings.Default.storage_id);
                             storage_class.storage_value_increase(value);
                         }
                         DialogResult dr2 = classes.notifications_class.my_messageBox("تم قبض المديونيات بنجاح\nهل تريد طباعة سند القبض ؟", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -359,8 +355,7 @@ namespace barber_app.customers_forms
                             the_name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2]).ToString();
                             date_time = DateTime.Now.ToString("dd-MM-yyyy") + " | " + DateTime.Now.ToString("HH:mm tt");
                             the_money = value.ToString();
-                            //TODO
-                            //repost_pos.snd_kbd_report.print(null, null);
+                            repost_pos.snd_kbd_report.print(null, null);
                             the_money = the_fatora_numbers = "";
                             value = 0;
                         }
@@ -381,8 +376,7 @@ namespace barber_app.customers_forms
             {
                 from_date = first_date.DateTime.ToString("dd-MM-yyyy");
                 to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-                //TODO
-                //repost_pos.customers_mdeonea_report.print(classes.my_grid_view_class.gridview_to_data_table(gridView1), null);
+                repost_pos.customers_mdeonea_report.print(classes.my_grid_view_class.gridview_to_data_table(gridView1), null);
             }
         }
     }

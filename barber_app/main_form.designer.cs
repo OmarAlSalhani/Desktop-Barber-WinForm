@@ -51,7 +51,7 @@ namespace barber_app
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.add_agent_btn = new DevExpress.XtraBars.BarButtonItem();
             this.agents_sales_btn = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.today_agel_btn = new DevExpress.XtraBars.BarButtonItem();
             this.customers_manage_btn = new DevExpress.XtraBars.BarButtonItem();
             this.snd_srf_btn = new DevExpress.XtraBars.BarButtonItem();
             this.users_btn = new DevExpress.XtraBars.BarButtonItem();
@@ -61,22 +61,37 @@ namespace barber_app
             this.storages_btn = new DevExpress.XtraBars.BarButtonItem();
             this.storages_operations_btn = new DevExpress.XtraBars.BarButtonItem();
             this.sales_report_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.customers_deon_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.customers_paied_money_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.customer_kshf_7sab_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.snd_qbd_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.snds_srf_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.snds_report_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.blackbox_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.daily_brief_btn = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -84,12 +99,8 @@ namespace barber_app
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.customers_deon_btn = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.customers_paied_money_btn = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.customer_kshf_7sab_btn = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ash3ar_btn = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +131,7 @@ namespace barber_app
             this.barButtonItem9,
             this.add_agent_btn,
             this.agents_sales_btn,
-            this.barButtonItem12,
+            this.today_agel_btn,
             this.customers_manage_btn,
             this.snd_srf_btn,
             this.users_btn,
@@ -132,21 +143,28 @@ namespace barber_app
             this.sales_report_btn,
             this.customers_deon_btn,
             this.customers_paied_money_btn,
-            this.customer_kshf_7sab_btn});
+            this.customer_kshf_7sab_btn,
+            this.snd_qbd_btn,
+            this.snds_srf_btn,
+            this.snds_report_btn,
+            this.blackbox_btn,
+            this.daily_brief_btn,
+            this.ash3ar_btn});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ribbon.MaxItemId = 32;
+            this.ribbon.MaxItemId = 38;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsStubGlyphs.Font = new System.Drawing.Font("Cairo", 10F);
             this.ribbon.OptionsStubGlyphs.UseFont = true;
-            this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem12);
+            this.ribbon.PageHeaderItemLinks.Add(this.today_agel_btn);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage5,
             this.ribbonPage6,
             this.ribbonPage3,
-            this.ribbonPage4});
-            this.ribbon.Size = new System.Drawing.Size(1396, 195);
+            this.ribbonPage4,
+            this.ribbonPage7});
+            this.ribbon.Size = new System.Drawing.Size(1396, 184);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barAndDockingController1
@@ -183,7 +201,6 @@ namespace barber_app
             this.manage_employees_btn.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Cairo", 10F);
             this.manage_employees_btn.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.manage_employees_btn.Name = "manage_employees_btn";
-            this.manage_employees_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.manage_employees_btn_ItemClick);
             // 
             // add_salary_btn
             // 
@@ -196,7 +213,6 @@ namespace barber_app
             this.add_salary_btn.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Cairo", 10F);
             this.add_salary_btn.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.add_salary_btn.Name = "add_salary_btn";
-            this.add_salary_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.add_salary_btn_ItemClick);
             // 
             // salaries_report_btn
             // 
@@ -205,7 +221,6 @@ namespace barber_app
             this.salaries_report_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("salaries_report_btn.ImageOptions.Image")));
             this.salaries_report_btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("salaries_report_btn.ImageOptions.LargeImage")));
             this.salaries_report_btn.Name = "salaries_report_btn";
-            this.salaries_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.salaries_report_btn_ItemClick);
             // 
             // add_advance_btn
             // 
@@ -220,7 +235,6 @@ namespace barber_app
             this.advances_report_btn.Id = 5;
             this.advances_report_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("advances_report_btn.ImageOptions.SvgImage")));
             this.advances_report_btn.Name = "advances_report_btn";
-            this.advances_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.advances_report_btn_ItemClick);
             // 
             // add_discount_btn
             // 
@@ -228,7 +242,6 @@ namespace barber_app
             this.add_discount_btn.Id = 6;
             this.add_discount_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("add_discount_btn.ImageOptions.SvgImage")));
             this.add_discount_btn.Name = "add_discount_btn";
-            this.add_discount_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.add_discount_btn_ItemClick);
             // 
             // discounts_report_btn
             // 
@@ -236,7 +249,6 @@ namespace barber_app
             this.discounts_report_btn.Id = 7;
             this.discounts_report_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("discounts_report_btn.ImageOptions.SvgImage")));
             this.discounts_report_btn.Name = "discounts_report_btn";
-            this.discounts_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.discounts_report_btn_ItemClick);
             // 
             // add_reward_btn
             // 
@@ -244,7 +256,6 @@ namespace barber_app
             this.add_reward_btn.Id = 8;
             this.add_reward_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("add_reward_btn.ImageOptions.SvgImage")));
             this.add_reward_btn.Name = "add_reward_btn";
-            this.add_reward_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.add_reward_btn_ItemClick);
             // 
             // rewards_report_btn
             // 
@@ -252,7 +263,6 @@ namespace barber_app
             this.rewards_report_btn.Id = 9;
             this.rewards_report_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("rewards_report_btn.ImageOptions.SvgImage")));
             this.rewards_report_btn.Name = "rewards_report_btn";
-            this.rewards_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rewards_report_btn_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -314,13 +324,14 @@ namespace barber_app
             this.agents_sales_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("agents_sales_btn.ImageOptions.SvgImage")));
             this.agents_sales_btn.Name = "agents_sales_btn";
             // 
-            // barButtonItem12
+            // today_agel_btn
             // 
-            this.barButtonItem12.Caption = "الأقساط";
-            this.barButtonItem12.Hint = "الأقساط";
-            this.barButtonItem12.Id = 19;
-            this.barButtonItem12.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem12.ImageOptions.SvgImage")));
-            this.barButtonItem12.Name = "barButtonItem12";
+            this.today_agel_btn.Caption = "الأقساط";
+            this.today_agel_btn.Hint = "الأقساط";
+            this.today_agel_btn.Id = 19;
+            this.today_agel_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("today_agel_btn.ImageOptions.SvgImage")));
+            this.today_agel_btn.Name = "today_agel_btn";
+            this.today_agel_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.today_agel_btn_ItemClick);
             // 
             // customers_manage_btn
             // 
@@ -328,6 +339,7 @@ namespace barber_app
             this.customers_manage_btn.Id = 20;
             this.customers_manage_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("customers_manage_btn.ImageOptions.SvgImage")));
             this.customers_manage_btn.Name = "customers_manage_btn";
+            this.customers_manage_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customers_manage_btn_ItemClick);
             // 
             // snd_srf_btn
             // 
@@ -342,6 +354,7 @@ namespace barber_app
             this.users_btn.Id = 22;
             this.users_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("users_btn.ImageOptions.SvgImage")));
             this.users_btn.Name = "users_btn";
+            this.users_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.users_btn_ItemClick);
             // 
             // categories_btn
             // 
@@ -371,6 +384,7 @@ namespace barber_app
             // 
             this.storages_btn.Caption = "إدارة الخزنات";
             this.storages_btn.Id = 26;
+            this.storages_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("storages_btn.ImageOptions.SvgImage")));
             this.storages_btn.Name = "storages_btn";
             this.storages_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.storages_btn_ItemClick);
             // 
@@ -378,6 +392,7 @@ namespace barber_app
             // 
             this.storages_operations_btn.Caption = "العمليات على الخزنات";
             this.storages_operations_btn.Id = 27;
+            this.storages_operations_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("storages_operations_btn.ImageOptions.SvgImage")));
             this.storages_operations_btn.Name = "storages_operations_btn";
             this.storages_operations_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.storages_operations_btn_ItemClick);
             // 
@@ -385,8 +400,73 @@ namespace barber_app
             // 
             this.sales_report_btn.Caption = "تقرير المبيعات";
             this.sales_report_btn.Id = 28;
+            this.sales_report_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("sales_report_btn.ImageOptions.SvgImage")));
             this.sales_report_btn.Name = "sales_report_btn";
             this.sales_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.sales_report_btn_ItemClick);
+            // 
+            // customers_deon_btn
+            // 
+            this.customers_deon_btn.Caption = "ديون العملاء";
+            this.customers_deon_btn.Id = 29;
+            this.customers_deon_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("customers_deon_btn.ImageOptions.SvgImage")));
+            this.customers_deon_btn.Name = "customers_deon_btn";
+            this.customers_deon_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customers_deon_btn_ItemClick);
+            // 
+            // customers_paied_money_btn
+            // 
+            this.customers_paied_money_btn.Caption = "المقبوضات من العملاء";
+            this.customers_paied_money_btn.Id = 30;
+            this.customers_paied_money_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("customers_paied_money_btn.ImageOptions.SvgImage")));
+            this.customers_paied_money_btn.Name = "customers_paied_money_btn";
+            this.customers_paied_money_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customers_paied_money_btn_ItemClick);
+            // 
+            // customer_kshf_7sab_btn
+            // 
+            this.customer_kshf_7sab_btn.Caption = "كشف حساب عميل";
+            this.customer_kshf_7sab_btn.Id = 31;
+            this.customer_kshf_7sab_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("customer_kshf_7sab_btn.ImageOptions.SvgImage")));
+            this.customer_kshf_7sab_btn.Name = "customer_kshf_7sab_btn";
+            this.customer_kshf_7sab_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customer_kshf_7sab_btn_ItemClick);
+            // 
+            // snd_qbd_btn
+            // 
+            this.snd_qbd_btn.Caption = "سند قبض";
+            this.snd_qbd_btn.Id = 32;
+            this.snd_qbd_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("snd_qbd_btn.ImageOptions.SvgImage")));
+            this.snd_qbd_btn.Name = "snd_qbd_btn";
+            this.snd_qbd_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.snd_qbd_btn_ItemClick);
+            // 
+            // snds_srf_btn
+            // 
+            this.snds_srf_btn.Caption = "سند صرف";
+            this.snds_srf_btn.Id = 33;
+            this.snds_srf_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("snds_srf_btn.ImageOptions.SvgImage")));
+            this.snds_srf_btn.Name = "snds_srf_btn";
+            this.snds_srf_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.snds_srf_btn_ItemClick);
+            // 
+            // snds_report_btn
+            // 
+            this.snds_report_btn.Caption = "تقرير السندات";
+            this.snds_report_btn.Id = 34;
+            this.snds_report_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("snds_report_btn.ImageOptions.SvgImage")));
+            this.snds_report_btn.Name = "snds_report_btn";
+            this.snds_report_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.snds_report_btn_ItemClick);
+            // 
+            // blackbox_btn
+            // 
+            this.blackbox_btn.Caption = "الصندوق الأسود";
+            this.blackbox_btn.Id = 35;
+            this.blackbox_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("blackbox_btn.ImageOptions.SvgImage")));
+            this.blackbox_btn.Name = "blackbox_btn";
+            this.blackbox_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blackbox_btn_ItemClick);
+            // 
+            // daily_brief_btn
+            // 
+            this.daily_brief_btn.Caption = "الملخص اليومي";
+            this.daily_brief_btn.Id = 36;
+            this.daily_brief_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("daily_brief_btn.ImageOptions.SvgImage")));
+            this.daily_brief_btn.Name = "daily_brief_btn";
+            this.daily_brief_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.daily_brief_btn_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -394,8 +474,10 @@ namespace barber_app
             this.ribbonPageGroup13,
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
+            this.ribbonPageGroup5,
             this.ribbonPageGroup1,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup9,
+            this.ribbonPageGroup18});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "الرئيسية";
             // 
@@ -414,16 +496,23 @@ namespace barber_app
             this.ribbonPageGroup3.ItemLinks.Add(this.categories_btn);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.snd_srf_btn, true);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.settings_btn);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.blackbox_btn);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.daily_brief_btn);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // ribbonPage5
             // 
@@ -440,6 +529,24 @@ namespace barber_app
             this.ribbonPageGroup19.ItemLinks.Add(this.customers_manage_btn);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
             // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.customers_deon_btn);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "ribbonPageGroup10";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.customers_paied_money_btn);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            this.ribbonPageGroup12.Text = "ribbonPageGroup12";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.customer_kshf_7sab_btn);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            this.ribbonPageGroup14.Text = "ribbonPageGroup14";
+            // 
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -455,8 +562,7 @@ namespace barber_app
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6,
-            this.ribbonPageGroup9});
+            this.ribbonPageGroup6});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "التقارير";
             // 
@@ -465,11 +571,6 @@ namespace barber_app
             this.ribbonPageGroup6.ItemLinks.Add(this.sales_report_btn);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "ribbonPageGroup6";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // ribbonPage4
             // 
@@ -490,6 +591,33 @@ namespace barber_app
             this.ribbonPageGroup8.ItemLinks.Add(this.storages_operations_btn);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "ribbonPageGroup8";
+            // 
+            // ribbonPage7
+            // 
+            this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup15,
+            this.ribbonPageGroup16,
+            this.ribbonPageGroup17});
+            this.ribbonPage7.Name = "ribbonPage7";
+            this.ribbonPage7.Text = "السندات";
+            // 
+            // ribbonPageGroup15
+            // 
+            this.ribbonPageGroup15.ItemLinks.Add(this.snd_qbd_btn);
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
+            this.ribbonPageGroup15.Text = "ribbonPageGroup15";
+            // 
+            // ribbonPageGroup16
+            // 
+            this.ribbonPageGroup16.ItemLinks.Add(this.snds_srf_btn);
+            this.ribbonPageGroup16.Name = "ribbonPageGroup16";
+            this.ribbonPageGroup16.Text = "ribbonPageGroup16";
+            // 
+            // ribbonPageGroup17
+            // 
+            this.ribbonPageGroup17.ItemLinks.Add(this.snds_report_btn);
+            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
+            this.ribbonPageGroup17.Text = "ribbonPageGroup17";
             // 
             // ribbonStatusBar
             // 
@@ -547,44 +675,19 @@ namespace barber_app
             this.ribbonPage2});
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             // 
-            // ribbonPageGroup10
+            // ribbonPageGroup18
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.customers_deon_btn);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "ribbonPageGroup10";
+            this.ribbonPageGroup18.ItemLinks.Add(this.ash3ar_btn);
+            this.ribbonPageGroup18.Name = "ribbonPageGroup18";
+            this.ribbonPageGroup18.Text = "ribbonPageGroup18";
             // 
-            // customers_deon_btn
+            // ash3ar_btn
             // 
-            this.customers_deon_btn.Caption = "ديون العملاء";
-            this.customers_deon_btn.Id = 29;
-            this.customers_deon_btn.Name = "customers_deon_btn";
-            this.customers_deon_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customers_deon_btn_ItemClick);
-            // 
-            // ribbonPageGroup12
-            // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.customers_paied_money_btn);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "ribbonPageGroup12";
-            // 
-            // customers_paied_money_btn
-            // 
-            this.customers_paied_money_btn.Caption = "المقبوضات من العملاء";
-            this.customers_paied_money_btn.Id = 30;
-            this.customers_paied_money_btn.Name = "customers_paied_money_btn";
-            this.customers_paied_money_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customers_paied_money_btn_ItemClick);
-            // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.customer_kshf_7sab_btn);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            this.ribbonPageGroup14.Text = "ribbonPageGroup14";
-            // 
-            // customer_kshf_7sab_btn
-            // 
-            this.customer_kshf_7sab_btn.Caption = "كشف حساب عميل";
-            this.customer_kshf_7sab_btn.Id = 31;
-            this.customer_kshf_7sab_btn.Name = "customer_kshf_7sab_btn";
-            this.customer_kshf_7sab_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.customer_kshf_7sab_btn_ItemClick);
+            this.ash3ar_btn.Caption = "أصدار الأشعارات";
+            this.ash3ar_btn.Id = 37;
+            this.ash3ar_btn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
+            this.ash3ar_btn.Name = "ash3ar_btn";
+            this.ash3ar_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ash3ar_btn_ItemClick);
             // 
             // main_form
             // 
@@ -639,13 +742,12 @@ namespace barber_app
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem add_agent_btn;
         private DevExpress.XtraBars.BarButtonItem agents_sales_btn;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem today_agel_btn;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
         private DevExpress.XtraBars.BarButtonItem customers_manage_btn;
         private DevExpress.XtraBars.BarButtonItem snd_srf_btn;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem users_btn;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
@@ -667,12 +769,24 @@ namespace barber_app
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem sales_report_btn;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem customers_deon_btn;
         private DevExpress.XtraBars.BarButtonItem customers_paied_money_btn;
         private DevExpress.XtraBars.BarButtonItem customer_kshf_7sab_btn;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem snd_qbd_btn;
+        private DevExpress.XtraBars.BarButtonItem snds_srf_btn;
+        private DevExpress.XtraBars.BarButtonItem snds_report_btn;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
+        private DevExpress.XtraBars.BarButtonItem blackbox_btn;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem daily_brief_btn;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem ash3ar_btn;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
     }
 }

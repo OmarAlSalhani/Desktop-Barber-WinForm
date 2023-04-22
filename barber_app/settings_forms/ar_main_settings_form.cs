@@ -16,11 +16,24 @@ namespace barber_app.n_settings_forms.ar
         public ar_main_settings_form()
         {
             InitializeComponent();
+            get_printers();
+        }
+        void get_printers()
+        {
+            foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                invoice_printer_name_cb.Properties.Items.Add(printer);
+                invoice_printer_name_cb.Properties.Items.Remove("Microsoft XPS Document Writer");
+                invoice_printer_name_cb.SelectedIndex = 0;
+
+                report_printer_name_cb.Properties.Items.Add(printer);
+                report_printer_name_cb.Properties.Items.Remove("Microsoft XPS Document Writer");
+                report_printer_name_cb.SelectedIndex = 0;
+            }
         }
         void info_message(string message)
         {
             OmarNotifications.Alert.ShowInformation(message);
-
         }
         bool check_if_every_thing_ok()
         {
@@ -64,6 +77,8 @@ namespace barber_app.n_settings_forms.ar
             mobile_tb.Text = main_settings.Default.mobile;
             landline_tb.Text = main_settings.Default.landline;
             logo_pic.Image =main_settings.Default.logo.Trim().Length==0?null:Image.FromFile(main_settings.Default.logo);
+            invoice_printer_name_cb.Text = main_settings.Default.invoice_printer_name;
+            report_printer_name_cb.Text = main_settings.Default.reports_printer_name;
         }
         private void save_btn_Click(object sender, EventArgs e)
         {
@@ -81,6 +96,8 @@ namespace barber_app.n_settings_forms.ar
                     main_settings.Default.mobile = mobile_tb.Text.Trim();
                     main_settings.Default.landline = landline_tb.Text.Trim();
                     main_settings.Default.logo =openFileDialog1.FileName.Trim().Length==0?"":openFileDialog1.FileName;
+                    main_settings.Default.invoice_printer_name =invoice_printer_name_cb.Text;
+                    main_settings.Default.reports_printer_name =report_printer_name_cb.Text;
                     main_settings.Default.Save();
                     notifications_class.success_message();
                     logs_class.log_add("تغيير الإعدادات العامة", 0, "الإعدادات");

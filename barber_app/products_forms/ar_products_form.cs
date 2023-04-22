@@ -26,7 +26,7 @@ namespace barber_app.products_forms
         // get product id
         private string IdFromDatabase()
         {
-            DataTable dataTable = connection_class.select("Select isnull(max(id)+1,1) from services_table");
+            DataTable dataTable = connection_class.select("Select ifnull(max(id)+1,1) from services_table");
             return dataTable.Rows[0][0].ToString();
         }
         void navigation(string query)
@@ -60,8 +60,7 @@ namespace barber_app.products_forms
                 notifications_class.no_data_message();
                 return;
             }
-            //TODO
-            //repost_pos.manage_products.print (my_grid_view_class.gridview_to_data_table (main_gridview), null);
+            repost_pos.manage_products.print (my_grid_view_class.gridview_to_data_table (main_gridview), null);
         }
 
         private void main_gridview_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
@@ -70,20 +69,17 @@ namespace barber_app.products_forms
         }
         private void word_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //  repost_pos.manage_products.to_word (my_grid_view_class.gridview_to_data_table (main_gridview));
+             repost_pos.manage_products.to_word (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
 
         private void excel_btn_Click_1(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_products.to_excel (my_grid_view_class.gridview_to_data_table (main_gridview));
+            repost_pos.manage_products.to_excel (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
 
         private void pdf_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_products.to_pdf (my_grid_view_class.gridview_to_data_table (main_gridview));
+             repost_pos.manage_products.to_pdf (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
         void select_all_for_edit_text(object sender, EventArgs e)
         {
@@ -136,11 +132,11 @@ namespace barber_app.products_forms
                 {
 
                     int id = Convert.ToInt32(id_tb.Text);
-                    DataTable table = connection_class.select($"select id from categories_table where category_name=N'{main_category_cb.Text}'");
+                    DataTable table = connection_class.select($"select id from categories_table where category_name='{main_category_cb.Text}'");
                     int category = Convert.ToInt32(table.Rows[0][0]);
                     string service = service_name_tb.Text;
                     double price = Convert.ToDouble(price_before_tax_tb.Text);
-                    connection_class.command($"insert into services_table values ({id},{category},N'{service}',{price})");
+                    connection_class.command($"insert into services_table values ({id},{category},'{service}',{price})");
                     notifications_class.success_message();
                     clearAllAndRunWorker();
                 }
@@ -211,7 +207,7 @@ namespace barber_app.products_forms
             {
                 try
                 {
-                    connection_class.command($"update services_table set service_name=N'{service_name_tb.Text}',price_before_tax={Convert.ToDouble(price_before_tax_tb.Text)}, main_category_id=(select id from categories_table where category_name=N'{main_category_cb.Text}') where id={Convert.ToInt32(id_tb.Text)}");
+                    connection_class.command($"update services_table set service_name='{service_name_tb.Text}',price_before_tax={Convert.ToDouble(price_before_tax_tb.Text)}, main_category_id=(select id from categories_table where category_name='{main_category_cb.Text}') where id={Convert.ToInt32(id_tb.Text)}");
                     notifications_class.success_message();
                     clearAllAndRunWorker();
                 }

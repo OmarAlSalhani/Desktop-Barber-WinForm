@@ -21,13 +21,6 @@ namespace barber_app.fatora_forms
         {
             the_pay_type = "نقداً";
            
-            if (settings_files.main_settings.Default.bank_name.Trim().Length == 0)
-            {
-                pay_type_cb.Enabled = false;
-                card_pay_textbox.Text = "0";
-                card_pay_textbox.Enabled = false;
-                cash_focused = true;
-            }
             cash_pay_textbox.Select();
             net_textbox.Text = total_textbox.Text;
             cash_pay_textbox.Text = total_textbox.Text;

@@ -25,8 +25,8 @@ namespace barber_app.storages_forms
         }
         string query()
         {
-            DataTable userIDTable = connection_class.select($"select user_id from users_table where username=N'{username_cb.Text}'");
-            DataTable storageIDTable = connection_class.select($"select id from storage_table where storage_name=N'{storage_name_cb.Text}'");
+            DataTable userIDTable = connection_class.select($"select user_id from users_table where username='{username_cb.Text}'");
+            DataTable storageIDTable = connection_class.select($"select id from storage_table where storage_name='{storage_name_cb.Text}'");
             int storageID = 0;
             int userID = 0;
             if (userIDTable.Rows.Count != 0)
@@ -46,11 +46,11 @@ namespace barber_app.storages_forms
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
-where the_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
+where the_date between '{f}' and '{l}'";
 
             }
             // date and storage
@@ -60,11 +60,11 @@ where the_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
-where storage_id={storageID} and the_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
+where storage_id={storageID} and the_date between '{f}' and '{l}'";
             }
             // date and storage and username
             if (search_by_date_cbx.Checked && search_by_storage_cbx.Checked && search_by_username_cbx.Checked)
@@ -73,11 +73,11 @@ where storage_id={storageID} and the_date between convert(date,'{f}',105) and co
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
-where storage_id={storageID} and user_id={userID} and the_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
+where storage_id={storageID} and user_id={userID} and the_date between '{f}' and '{l}'";
             }
             //storage
             if (search_by_storage_cbx.Checked && search_by_date_cbx.Checked == false && search_by_username_cbx.Checked == false)
@@ -86,7 +86,7 @@ where storage_id={storageID} and user_id={userID} and the_date between convert(d
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
@@ -100,7 +100,7 @@ where storage_id={storageID}";
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
@@ -113,7 +113,7 @@ where user_id={userID}";
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
@@ -126,11 +126,11 @@ where storage_id={storageID} and user_id={userID}";
 ,(select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 ,storage_event as 'الحدث'
 ,the_rsed as 'الرصيد'
-,convert(nvarchar,the_date,105) as 'التاريخ'
+,the_date as 'التاريخ'
 ,the_time as 'الوقت'
 ,user_id as 'المستخدم'
 from storage_logs_table
-where user_id={userID} and the_date between convert(date,'{f}',105) and convert(date,'{l}',105)";
+where user_id={userID} and the_date between '{f}' and '{l}'";
             }
 
             return string.Empty;
@@ -195,7 +195,7 @@ where user_id={userID} and the_date between convert(date,'{f}',105) and convert(
 , (select storage_name from storage_table where storage_table.id=storage_id) as 'الخزنة'
 , storage_event as 'الحدث'
 , the_rsed as 'الرصيد'
-, convert(nvarchar, the_date, 105) as 'التاريخ'
+, the_date as 'التاريخ'
 , the_time as 'الوقت'
 , user_id as 'المستخدم'
 from storage_logs_table
@@ -206,20 +206,17 @@ where 1=2");
 
         private void pdf_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.storage_operations.to_pdf(my_grid_view_class.gridview_to_data_table(gridView2));
+            repost_pos.storage_operations.to_pdf(my_grid_view_class.gridview_to_data_table(gridView2));
         }
 
         private void excel_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //  repost_pos.storage_operations.to_excel(my_grid_view_class.gridview_to_data_table(gridView2));
+             repost_pos.storage_operations.to_excel(my_grid_view_class.gridview_to_data_table(gridView2));
         }
 
         private void word_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.storage_operations.to_word(my_grid_view_class.gridview_to_data_table(gridView2));
+            repost_pos.storage_operations.to_word(my_grid_view_class.gridview_to_data_table(gridView2));
         }
 
         private void groupControl6_Paint(object sender, PaintEventArgs e)
@@ -255,8 +252,7 @@ where 1=2");
             }
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.storage_operations.print(my_grid_view_class.gridview_to_data_table(gridView2), null);
+            repost_pos.storage_operations.print(my_grid_view_class.gridview_to_data_table(gridView2), null);
         }
     }
 }

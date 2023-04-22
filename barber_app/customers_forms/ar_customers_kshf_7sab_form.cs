@@ -30,7 +30,7 @@ namespace barber_app.customers_forms
 
         private void ar_customers_kshf_7sab_form_Load(object sender, EventArgs e)
         {
-            DataTable table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',convert(nvarchar,the_date,105) as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where 1=2");
+            DataTable table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',the_date as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where 1=2");
             my_grid_view_class.set_datasource(gridControl1, gridView1, table);
             run_worker_class.run(customer_worker);
         }
@@ -49,8 +49,7 @@ namespace barber_app.customers_forms
                 total = my_grid_view_class.column_sum(gridView1, "القيمة");
                 from_date = first_date.DateTime.ToString("dd-MM-yyyy");
                 to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-                //TODO
-                //repost_pos.customers_kshf_7sab_report.print(classes.my_grid_view_class.gridview_to_data_table(gridView1), null);
+                repost_pos.customers_kshf_7sab_report.print(classes.my_grid_view_class.gridview_to_data_table(gridView1), null);
             }
         }
 
@@ -64,8 +63,7 @@ namespace barber_app.customers_forms
             total = my_grid_view_class.column_sum(gridView1, "القيمة");
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.customers_kshf_7sab_report.to_word(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+            repost_pos.customers_kshf_7sab_report.to_word(classes.my_grid_view_class.gridview_to_data_table(gridView1));
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
@@ -102,8 +100,7 @@ namespace barber_app.customers_forms
             total = my_grid_view_class.column_sum(gridView1, "القيمة");
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.customers_kshf_7sab_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+            repost_pos.customers_kshf_7sab_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(gridView1));
         }
 
         private void pdf_btn_Click(object sender, EventArgs e)
@@ -116,8 +113,7 @@ namespace barber_app.customers_forms
             total = my_grid_view_class.column_sum(gridView1, "القيمة");
             from_date = first_date.DateTime.ToString("dd-MM-yyyy");
             to_date = last_date.DateTime.ToString("dd-MM-yyyy");
-            //TODO
-            //repost_pos.customers_kshf_7sab_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(gridView1));
+            repost_pos.customers_kshf_7sab_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(gridView1));
         }
 
         private void customer_worker_DoWork(object sender, DoWorkEventArgs e)
@@ -156,7 +152,7 @@ namespace barber_app.customers_forms
         }
         void do_search(int query_status)
         {
-            DataTable CustomerIDTable = connection_class.select($"select customer_id from customers_table where customer_name=N'{customer_cb.Text}'");
+            DataTable CustomerIDTable = connection_class.select($"select customer_id from customers_table where customer_name='{customer_cb.Text}'");
             int customerID = 0;
             if (CustomerIDTable.Rows.Count != 0)
             {
@@ -166,15 +162,15 @@ namespace barber_app.customers_forms
             string l = last_date.DateTime.ToString("dd-MM-yyyy");
             if (query_status == 1)
             {
-                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',convert(nvarchar,the_date,105) as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where customer_id={customerID}");
+                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',the_date as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where customer_id={customerID}");
             }
             if (query_status == 2)
             {
-                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',convert(nvarchar,the_date,105) as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where the_date between convert(date,N'{f}',105) and convert(date,N'{l}',105)");
+                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',the_date as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where the_date between '{f}' and '{l}'");
             }
             if (query_status == 3)
             {
-                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',convert(nvarchar,the_date,105) as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where customer_id={customerID} and the_date between convert(date,N'{f}',105) and convert(date,N'{l}',105)");
+                table = connection_class.select($"select id as 'الرمز', customer_id as 'رقم العميل',(select customer_name from customers_table where customers_table.customer_id=customer_kshf_table.customer_id) as 'العميل',statment as 'البيان',value as 'القيمة',the_date as 'التاريخ',(select username from users_table where users_table.user_id=userID) as 'المستخدم' from customer_kshf_table where customer_id={customerID} and the_date between '{f}' and '{l}'");
             }
             if (table.Rows.Count == 0)
             {

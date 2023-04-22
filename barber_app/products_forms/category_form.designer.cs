@@ -334,7 +334,6 @@
             this.main_gridview.OptionsFind.ShowFindButton = false;
             this.main_gridview.OptionsImageLoad.AnimationType = DevExpress.Utils.ImageContentAnimationType.Slide;
             this.main_gridview.OptionsNavigation.AutoFocusNewRow = true;
-            this.main_gridview.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.main_gridview.OptionsSelection.MultiSelect = true;
             this.main_gridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.main_gridview.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;

@@ -45,7 +45,6 @@
             this.pay_btn = new DevExpress.XtraEditors.SimpleButton();
             this.pay_and_print_btn = new DevExpress.XtraEditors.SimpleButton();
             this.quantites_grid_control = new DevExpress.XtraGrid.GridControl();
-            this.productsmodelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.main_gridview = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colproduct_name = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,18 +55,11 @@
             this.colfull_value = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.before_tax_lbl = new System.Windows.Forms.Label();
-            this.tax_lbl = new System.Windows.Forms.Label();
-            this.after_tax_lbl = new System.Windows.Forms.Label();
-            this.total_amount_before_tax_textbox = new DevExpress.XtraEditors.ButtonEdit();
-            this.total_amount_after_tax_textbox = new DevExpress.XtraEditors.ButtonEdit();
-            this.tax_textbox = new DevExpress.XtraEditors.ButtonEdit();
             this.customers_worker = new System.ComponentModel.BackgroundWorker();
             this.fill_services_worker = new System.ComponentModel.BackgroundWorker();
-            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
-            this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.fill_categories_worker = new System.ComponentModel.BackgroundWorker();
+            this.colqty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.productsmodelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.service_name_cb.Properties)).BeginInit();
@@ -81,17 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantites_grid_control)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsmodelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.main_gridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.total_amount_before_tax_textbox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.total_amount_after_tax_textbox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tax_textbox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
-            this.groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
-            this.navigationFrame1.SuspendLayout();
-            this.navigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsmodelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -129,7 +113,7 @@
             this.service_name_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.service_name_cb.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.customer_name_cb_Properties_ButtonClick);
+            this.service_name_cb.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.service_name_click);
             this.service_name_cb.Size = new System.Drawing.Size(194, 32);
             this.service_name_cb.TabIndex = 44;
             // 
@@ -144,7 +128,7 @@
             this.main_category_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus)});
-            this.main_category_cb.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.customer_name_cb_Properties_ButtonClick);
+            this.main_category_cb.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.main_categoey_click);
             this.main_category_cb.Size = new System.Drawing.Size(166, 32);
             this.main_category_cb.TabIndex = 43;
             this.main_category_cb.SelectedIndexChanged += new System.EventHandler(this.main_category_cb_SelectedIndexChanged);
@@ -174,6 +158,7 @@
             this.add_product_btn.Size = new System.Drawing.Size(34, 31);
             this.add_product_btn.TabIndex = 33;
             this.add_product_btn.ToolTip = "إضافة المادة";
+            this.add_product_btn.EditValueChanged += new System.EventHandler(this.add_product_btn_EditValueChanged);
             this.add_product_btn.Click += new System.EventHandler(this.add_product_button_Click);
             // 
             // label3
@@ -278,9 +263,9 @@
             this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl4.Controls.Add(this.pay_btn);
             this.groupControl4.Controls.Add(this.pay_and_print_btn);
-            this.groupControl4.Location = new System.Drawing.Point(512, 444);
+            this.groupControl4.Location = new System.Drawing.Point(0, 480);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(523, 124);
+            this.groupControl4.Size = new System.Drawing.Size(1035, 87);
             this.groupControl4.TabIndex = 17;
             this.groupControl4.Text = "العمليات المتاحة";
             // 
@@ -290,9 +275,9 @@
             this.pay_btn.Appearance.Options.UseFont = true;
             this.pay_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("pay_btn.ImageOptions.Image")));
             this.pay_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.pay_btn.Location = new System.Drawing.Point(18, 41);
+            this.pay_btn.Location = new System.Drawing.Point(289, 30);
             this.pay_btn.Name = "pay_btn";
-            this.pay_btn.Size = new System.Drawing.Size(242, 73);
+            this.pay_btn.Size = new System.Drawing.Size(242, 51);
             this.pay_btn.TabIndex = 2;
             this.pay_btn.Text = "حفظ الفاتورة بدون طباعة";
             this.pay_btn.Click += new System.EventHandler(this.pay_btn_Click);
@@ -303,9 +288,9 @@
             this.pay_and_print_btn.Appearance.Options.UseFont = true;
             this.pay_and_print_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("pay_and_print_btn.ImageOptions.Image")));
             this.pay_and_print_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.pay_and_print_btn.Location = new System.Drawing.Point(264, 41);
+            this.pay_and_print_btn.Location = new System.Drawing.Point(535, 30);
             this.pay_and_print_btn.Name = "pay_and_print_btn";
-            this.pay_and_print_btn.Size = new System.Drawing.Size(242, 73);
+            this.pay_and_print_btn.Size = new System.Drawing.Size(242, 51);
             this.pay_and_print_btn.TabIndex = 1;
             this.pay_and_print_btn.Text = "حفظ وطباعة الفاتورة";
             this.pay_and_print_btn.Click += new System.EventHandler(this.pay_print_btn_Click);
@@ -313,20 +298,16 @@
             // quantites_grid_control
             // 
             this.quantites_grid_control.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.quantites_grid_control.DataSource = this.productsmodelBindingSource1;
+            this.quantites_grid_control.DataSource = this.productsmodelBindingSource;
             this.quantites_grid_control.Location = new System.Drawing.Point(1, 77);
             this.quantites_grid_control.MainView = this.main_gridview;
             this.quantites_grid_control.Name = "quantites_grid_control";
             this.quantites_grid_control.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.quantites_grid_control.Size = new System.Drawing.Size(1034, 365);
+            this.quantites_grid_control.Size = new System.Drawing.Size(1034, 401);
             this.quantites_grid_control.TabIndex = 38;
             this.quantites_grid_control.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.main_gridview});
-            // 
-            // productsmodelBindingSource1
-            // 
-            this.productsmodelBindingSource1.DataSource = typeof(barber_app.products_forms.products_model);
             // 
             // main_gridview
             // 
@@ -342,6 +323,15 @@
             this.main_gridview.Appearance.FocusedRow.Options.UseTextOptions = true;
             this.main_gridview.Appearance.FocusedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.main_gridview.Appearance.FocusedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.main_gridview.Appearance.FooterPanel.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold);
+            this.main_gridview.Appearance.FooterPanel.Options.UseFont = true;
+            this.main_gridview.Appearance.FooterPanel.Options.UseTextOptions = true;
+            this.main_gridview.Appearance.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.main_gridview.Appearance.FooterPanel.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.None;
+            this.main_gridview.Appearance.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.main_gridview.Appearance.FooterPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.main_gridview.Appearance.GroupFooter.Font = new System.Drawing.Font("Cairo", 12F);
+            this.main_gridview.Appearance.GroupFooter.Options.UseFont = true;
             this.main_gridview.Appearance.HeaderPanel.Font = new System.Drawing.Font("Cairo", 10F);
             this.main_gridview.Appearance.HeaderPanel.Options.UseFont = true;
             this.main_gridview.Appearance.HeaderPanel.Options.UseTextOptions = true;
@@ -363,6 +353,7 @@
             this.main_gridview.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid,
             this.colproduct_name,
+            this.colqty,
             this.colbefore_tax,
             this.colafter_tax,
             this.coldiscount,
@@ -392,12 +383,15 @@
             this.main_gridview.OptionsFind.ShowFindButton = false;
             this.main_gridview.OptionsFind.ShowSearchNavButtons = false;
             this.main_gridview.OptionsImageLoad.AnimationType = DevExpress.Utils.ImageContentAnimationType.Slide;
+            this.main_gridview.OptionsMenu.ShowFooterItem = true;
+            this.main_gridview.OptionsMenu.ShowSummaryItemMode = DevExpress.Utils.DefaultBoolean.True;
             this.main_gridview.OptionsNavigation.AutoFocusNewRow = true;
             this.main_gridview.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.main_gridview.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.True;
             this.main_gridview.OptionsSelection.MultiSelect = true;
             this.main_gridview.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.main_gridview.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
+            this.main_gridview.OptionsView.ShowFooter = true;
             this.main_gridview.OptionsView.ShowGroupPanel = false;
             this.main_gridview.OptionsView.ShowIndicator = false;
             this.main_gridview.OptionsView.WaitAnimationOptions = DevExpress.XtraEditors.WaitAnimationOptions.Indicator;
@@ -431,6 +425,8 @@
             this.colbefore_tax.Name = "colbefore_tax";
             this.colbefore_tax.OptionsColumn.AllowMove = false;
             this.colbefore_tax.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colbefore_tax.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "price_before_tax", "المجموع={0:0.##}")});
             this.colbefore_tax.Visible = true;
             this.colbefore_tax.VisibleIndex = 1;
             // 
@@ -443,6 +439,8 @@
             this.colafter_tax.OptionsColumn.AllowMove = false;
             this.colafter_tax.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colafter_tax.OptionsColumn.ShowInExpressionEditor = false;
+            this.colafter_tax.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "price_after_tax", "المجموع={0:0.##}")});
             this.colafter_tax.Visible = true;
             this.colafter_tax.VisibleIndex = 2;
             // 
@@ -453,6 +451,8 @@
             this.coldiscount.Name = "coldiscount";
             this.coldiscount.OptionsColumn.AllowMove = false;
             this.coldiscount.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.coldiscount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "discount", "المجموع={0:0.##}")});
             this.coldiscount.Visible = true;
             this.coldiscount.VisibleIndex = 3;
             // 
@@ -465,6 +465,8 @@
             this.coltax.OptionsColumn.AllowMove = false;
             this.coltax.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.coltax.OptionsColumn.ShowInExpressionEditor = false;
+            this.coltax.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "tax", "المجموع={0:0.##}")});
             this.coltax.Visible = true;
             this.coltax.VisibleIndex = 4;
             // 
@@ -477,6 +479,8 @@
             this.colfull_value.OptionsColumn.AllowMove = false;
             this.colfull_value.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colfull_value.OptionsColumn.ShowInExpressionEditor = false;
+            this.colfull_value.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "total", "المجموع={0:0.##}")});
             this.colfull_value.Visible = true;
             this.colfull_value.VisibleIndex = 5;
             // 
@@ -489,7 +493,7 @@
             this.gridColumn1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.gridColumn1.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.VisibleIndex = 7;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -498,90 +502,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // before_tax_lbl
-            // 
-            this.before_tax_lbl.AutoSize = true;
-            this.before_tax_lbl.Font = new System.Drawing.Font("Cairo", 10F);
-            this.before_tax_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.before_tax_lbl.Location = new System.Drawing.Point(366, 11);
-            this.before_tax_lbl.Name = "before_tax_lbl";
-            this.before_tax_lbl.Size = new System.Drawing.Size(135, 26);
-            this.before_tax_lbl.TabIndex = 2;
-            this.before_tax_lbl.Text = "الإجمالي قبل الضريبة";
-            // 
-            // tax_lbl
-            // 
-            this.tax_lbl.AutoSize = true;
-            this.tax_lbl.Font = new System.Drawing.Font("Cairo", 10F);
-            this.tax_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tax_lbl.Location = new System.Drawing.Point(109, 11);
-            this.tax_lbl.Name = "tax_lbl";
-            this.tax_lbl.Size = new System.Drawing.Size(102, 26);
-            this.tax_lbl.TabIndex = 3;
-            this.tax_lbl.Text = "إجمالي الضريبة";
-            // 
-            // after_tax_lbl
-            // 
-            this.after_tax_lbl.AutoSize = true;
-            this.after_tax_lbl.Font = new System.Drawing.Font("Cairo", 10F);
-            this.after_tax_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.after_tax_lbl.Location = new System.Drawing.Point(367, 51);
-            this.after_tax_lbl.Name = "after_tax_lbl";
-            this.after_tax_lbl.Size = new System.Drawing.Size(134, 26);
-            this.after_tax_lbl.TabIndex = 4;
-            this.after_tax_lbl.Text = "الإجمالي بعد الضريبة";
-            // 
-            // total_amount_before_tax_textbox
-            // 
-            this.total_amount_before_tax_textbox.EditValue = "";
-            this.total_amount_before_tax_textbox.Location = new System.Drawing.Point(212, 7);
-            this.total_amount_before_tax_textbox.Name = "total_amount_before_tax_textbox";
-            this.total_amount_before_tax_textbox.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.total_amount_before_tax_textbox.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.total_amount_before_tax_textbox.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
-            this.total_amount_before_tax_textbox.Properties.Appearance.Options.UseFont = true;
-            this.total_amount_before_tax_textbox.Properties.Appearance.Options.UseTextOptions = true;
-            this.total_amount_before_tax_textbox.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.total_amount_before_tax_textbox.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.total_amount_before_tax_textbox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.total_amount_before_tax_textbox.Properties.ReadOnly = true;
-            this.total_amount_before_tax_textbox.Size = new System.Drawing.Size(148, 34);
-            this.total_amount_before_tax_textbox.TabIndex = 41;
-            // 
-            // total_amount_after_tax_textbox
-            // 
-            this.total_amount_after_tax_textbox.EditValue = "";
-            this.total_amount_after_tax_textbox.Location = new System.Drawing.Point(11, 47);
-            this.total_amount_after_tax_textbox.Name = "total_amount_after_tax_textbox";
-            this.total_amount_after_tax_textbox.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.total_amount_after_tax_textbox.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.total_amount_after_tax_textbox.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
-            this.total_amount_after_tax_textbox.Properties.Appearance.Options.UseFont = true;
-            this.total_amount_after_tax_textbox.Properties.Appearance.Options.UseTextOptions = true;
-            this.total_amount_after_tax_textbox.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.total_amount_after_tax_textbox.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.total_amount_after_tax_textbox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.total_amount_after_tax_textbox.Properties.ReadOnly = true;
-            this.total_amount_after_tax_textbox.Size = new System.Drawing.Size(349, 34);
-            this.total_amount_after_tax_textbox.TabIndex = 39;
-            // 
-            // tax_textbox
-            // 
-            this.tax_textbox.EditValue = "";
-            this.tax_textbox.Location = new System.Drawing.Point(11, 7);
-            this.tax_textbox.Name = "tax_textbox";
-            this.tax_textbox.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.tax_textbox.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.tax_textbox.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F, System.Drawing.FontStyle.Bold);
-            this.tax_textbox.Properties.Appearance.Options.UseFont = true;
-            this.tax_textbox.Properties.Appearance.Options.UseTextOptions = true;
-            this.tax_textbox.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tax_textbox.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.tax_textbox.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.tax_textbox.Properties.ReadOnly = true;
-            this.tax_textbox.Size = new System.Drawing.Size(93, 34);
-            this.tax_textbox.TabIndex = 40;
             // 
             // customers_worker
             // 
@@ -593,51 +513,22 @@
             this.fill_services_worker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.fill_services_worker_DoWork);
             this.fill_services_worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.fill_services_worker_RunWorkerCompleted);
             // 
-            // groupControl6
-            // 
-            this.groupControl6.AppearanceCaption.Font = new System.Drawing.Font("Cairo", 10F);
-            this.groupControl6.AppearanceCaption.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupControl6.AppearanceCaption.Options.UseFont = true;
-            this.groupControl6.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl6.Controls.Add(this.navigationFrame1);
-            this.groupControl6.Location = new System.Drawing.Point(1, 444);
-            this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(509, 124);
-            this.groupControl6.TabIndex = 42;
-            this.groupControl6.Text = "بيانات الفاتورة المالية";
-            // 
-            // navigationFrame1
-            // 
-            this.navigationFrame1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.navigationFrame1.Appearance.Options.UseBackColor = true;
-            this.navigationFrame1.Controls.Add(this.navigationPage1);
-            this.navigationFrame1.Location = new System.Drawing.Point(3, 34);
-            this.navigationFrame1.Name = "navigationFrame1";
-            this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.navigationPage1});
-            this.navigationFrame1.SelectedPage = this.navigationPage1;
-            this.navigationFrame1.Size = new System.Drawing.Size(505, 85);
-            this.navigationFrame1.TabIndex = 43;
-            this.navigationFrame1.Text = "navigationFrame1";
-            // 
-            // navigationPage1
-            // 
-            this.navigationPage1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.navigationPage1.Appearance.Options.UseBackColor = true;
-            this.navigationPage1.Caption = "navigationPage1";
-            this.navigationPage1.Controls.Add(this.before_tax_lbl);
-            this.navigationPage1.Controls.Add(this.total_amount_after_tax_textbox);
-            this.navigationPage1.Controls.Add(this.total_amount_before_tax_textbox);
-            this.navigationPage1.Controls.Add(this.tax_lbl);
-            this.navigationPage1.Controls.Add(this.tax_textbox);
-            this.navigationPage1.Controls.Add(this.after_tax_lbl);
-            this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(505, 85);
-            // 
             // fill_categories_worker
             // 
             this.fill_categories_worker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.fill_categories_worker_DoWork);
             this.fill_categories_worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.fill_categories_worker_RunWorkerCompleted);
+            // 
+            // colqty
+            // 
+            this.colqty.Caption = "الكمية";
+            this.colqty.FieldName = "quantity";
+            this.colqty.Name = "colqty";
+            this.colqty.Visible = true;
+            this.colqty.VisibleIndex = 1;
+            // 
+            // productsmodelBindingSource
+            // 
+            this.productsmodelBindingSource.DataSource = typeof(barber_app.products_forms.products_model);
             // 
             // ar_pos_uc
             // 
@@ -645,7 +536,6 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupControl6);
             this.Controls.Add(this.quantites_grid_control);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl4);
@@ -669,18 +559,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.quantites_grid_control)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsmodelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.main_gridview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.total_amount_before_tax_textbox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.total_amount_after_tax_textbox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tax_textbox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
-            this.groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
-            this.navigationFrame1.ResumeLayout(false);
-            this.navigationPage1.ResumeLayout(false);
-            this.navigationPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsmodelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,12 +573,6 @@
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraGrid.GridControl quantites_grid_control;
-        private DevExpress.XtraEditors.ButtonEdit total_amount_before_tax_textbox;
-        private DevExpress.XtraEditors.ButtonEdit tax_textbox;
-        private DevExpress.XtraEditors.ButtonEdit total_amount_after_tax_textbox;
-        private System.Windows.Forms.Label before_tax_lbl;
-        private System.Windows.Forms.Label tax_lbl;
-        private System.Windows.Forms.Label after_tax_lbl;
         private System.ComponentModel.BackgroundWorker customers_worker;
         private System.ComponentModel.BackgroundWorker fill_services_worker;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -715,14 +590,12 @@
         public DevExpress.XtraEditors.DateEdit agel_due_date_dtp;
         public DevExpress.XtraEditors.ComboBoxEdit customer_name_cb;
         private DevExpress.XtraEditors.PictureEdit add_product_btn;
-        private DevExpress.XtraEditors.GroupControl groupControl6;
-        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
-        private System.Windows.Forms.BindingSource productsmodelBindingSource1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         public DevExpress.XtraEditors.ComboBoxEdit service_name_cb;
         public DevExpress.XtraEditors.ComboBoxEdit main_category_cb;
         private System.ComponentModel.BackgroundWorker fill_categories_worker;
+        private DevExpress.XtraGrid.Columns.GridColumn colqty;
+        private System.Windows.Forms.BindingSource productsmodelBindingSource;
     }
 }

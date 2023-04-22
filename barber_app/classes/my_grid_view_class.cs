@@ -210,7 +210,7 @@ namespace barber_app.classes
             }
 
         }
-        public static void set_font_and_hover_effect(DevExpress.XtraGrid.Views.Grid.GridView main_gridview, int header_font_size = 10, int row_font_size = 9)
+        public static void set_font_and_hover_effect(DevExpress.XtraGrid.Views.Grid.GridView main_gridview, int header_font_size = 10, int row_font_size = 10)
         {
             Font body_font;
             Font head_font;
@@ -263,8 +263,8 @@ namespace barber_app.classes
         }
         public static void set_datasource(DevExpress.XtraGrid.GridControl gridControl, DevExpress.XtraGrid.Views.Grid.GridView gridview, DataTable table)
         {
-                set_colors(gridview);
-           gridview.OptionsView.ColumnAutoWidth = true;
+            set_colors(gridview);
+            gridview.OptionsView.ColumnAutoWidth = true;
             gridControl.DataSource = table;
             gridview.BestFitColumns(true);
             gridview.KeyDown += Gridview_KeyDown;

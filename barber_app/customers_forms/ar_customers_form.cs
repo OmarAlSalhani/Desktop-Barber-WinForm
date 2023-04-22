@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using barber_app.classes;
 using System.IO;
 using barber_app.settings_files;
+using System.Data.SQLite;
 
 namespace barber_app.customers_forms
 {
@@ -51,9 +52,9 @@ namespace barber_app.customers_forms
                     {
                         aol_moda = Math.Round(Convert.ToDouble(aol_moda_text.Text), 2);
                     }
-                    DataTable table = connection_class.select("select isnull(max(customer_id)+1,1) from customers_table");
+                    DataTable table = connection_class.select("select ifnull(max(customer_id)+1,1) from customers_table");
                     int id = Convert.ToInt32(table.Rows[0][0]);
-                    SqlCommand command = new SqlCommand();
+                    SQLiteCommand command = new SQLiteCommand();
                     command.Connection = connection_class.connection();
                     command.CommandText = "insert_into_customer_table";
                     command.CommandType = CommandType.StoredProcedure;
@@ -91,7 +92,7 @@ namespace barber_app.customers_forms
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand();
+                    SQLiteCommand command = new SQLiteCommand();
                     command.Connection = connection_class.connection();
                     command.CommandText = @"update customers_table set customer_name=@customer_name,customer_phone=@customer_phone,customer_address=@customer_address,personal_pic=@personal_pic,rsed_aol_moda=@rsed_aol_moda where customer_id=@customer_id";
                     command.Parameters.AddWithValue("@customer_id", Convert.ToInt32(id_tb.Text));
@@ -102,7 +103,6 @@ namespace barber_app.customers_forms
                     command.Parameters.AddWithValue("@rsed_aol_moda", (aol_moda_text.Text.Trim().Length == 0) ? 0 : Math.Round(Convert.ToDouble(aol_moda_text.Text), 2));
                     if (command.ExecuteNonQuery() == 1)
                     {
-                        update_customer_in_all_tables(name.Text.Trim(), old_name);
                         logs_class.log_add($"تعديل العميل ذو الرقم {id_tb.Text}", 0, "العملاء");
                         new_btn.PerformClick();
                         classes.notifications_class.success_message();
@@ -156,34 +156,23 @@ namespace barber_app.customers_forms
         }
         int get_id()
         {
-            DataTable table = connection_class.select("select isnull(max(customer_id)+1,1) from customers_table");
+            DataTable table = connection_class.select("select ifnull(max(customer_id)+1,1) from customers_table");
             return Convert.ToInt32(table.Rows[0][0]);
         }
-        void update_customer_in_all_tables(string new_name, string old_name)
+        void delete_customer_in_all_tables(int id)
         {
-            connection_class.command($"update agle_table set customer_name=N'{new_name}' where customer_name=N'{old_name}'");
-            connection_class.command($"update sell_head_table set customer_name=N'{new_name}' where customer_name=N'{old_name}'");
-            connection_class.command($"update customers_paied_money_table set customer_name=N'{new_name}' where customer_name=N'{old_name}'");
-            connection_class.command($"update customer_kshf_table set customer_name=N'{new_name}' where customer_name=N'{old_name}'");
-            connection_class.command($"update archived_sell_head_table set customer_name=N'{new_name}' where customer_name=N'{old_name}'");
-        }
-        void delete_customer_in_all_tables(string name)
-        {
-            connection_class.command($"delete from agle_table where customer_name=N'{name}'");
-            connection_class.command($"delete from sell_head_table where customer_name=N'{name}'");
-            connection_class.command($"delete from customers_paied_money_table where customer_name=N'{name}'");
-            connection_class.command($"delete from customer_kshf_table where customer_name=N'{name}' ");
-            connection_class.command($"delete from archived_sell_head_table where customer_name=N'{name}'");
+            connection_class.command($"delete from agle_table where customer_id={id}");
+            connection_class.command($"delete from sales_head_table where customer_id={id}");
+            connection_class.command($"delete from customers_paied_money_table where customer_id={id}");
+            connection_class.command($"delete from customer_kshf_table where customer_id={id}");
         }
         private void update_btn_Click(object sender, EventArgs e)
         {
-
             if (main_gridview.SelectedRowsCount > 1)
             {
                 OmarNotifications.Alert.ShowInformation("يجب تحديد عميل واحد فقط");
                 return;
             }
-
             DialogResult dr = notifications_class.my_messageBox("هل تريد تأكيد التعديل ؟", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
                 UpdateData();
@@ -280,8 +269,8 @@ namespace barber_app.customers_forms
                 {
                     foreach (int i in main_gridview.GetSelectedRows())
                     {
-                        delete_customer_in_all_tables(name.Text.Trim());
-                        string the_name = main_gridview.GetRowCellValue(i, main_gridview.Columns[1].FieldName).ToString();
+                        int id = Convert.ToInt32(main_gridview.GetRowCellValue(i, main_gridview.Columns[0].FieldName));
+                        delete_customer_in_all_tables(id);
                         connection_class.command($"delete from customers_table where customer_id={Convert.ToInt32(main_gridview.GetRowCellValue(i, main_gridview.Columns[0].FieldName))}");
                         logs_class.log_add($"حذف العميل ذو الرقم {id_tb.Text}", 0, "العملاء");
                     }
@@ -334,41 +323,23 @@ namespace barber_app.customers_forms
                 notifications_class.no_data_message();
                 return;
             }
-            //TODO
-            // repost_pos.manage_customers.print(my_grid_view_class.gridview_to_data_table(main_gridview), null);
+            repost_pos.manage_customers.print(my_grid_view_class.gridview_to_data_table(main_gridview), null);
         }
 
         private void word_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_customers.to_word(my_grid_view_class.gridview_to_data_table(main_gridview));
+             repost_pos.manage_customers.to_word(my_grid_view_class.gridview_to_data_table(main_gridview));
         }
 
         private void excel_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //  repost_pos.manage_customers.to_excel(my_grid_view_class.gridview_to_data_table(main_gridview));
+              repost_pos.manage_customers.to_excel(my_grid_view_class.gridview_to_data_table(main_gridview));
         }
 
         private void pdf_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //repost_pos.manage_customers.to_pdf(my_grid_view_class.gridview_to_data_table(main_gridview));
+            repost_pos.manage_customers.to_pdf(my_grid_view_class.gridview_to_data_table(main_gridview));
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

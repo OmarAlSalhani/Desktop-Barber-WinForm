@@ -33,26 +33,22 @@ namespace barber_app.products_forms
                 notifications_class.no_data_message();
                 return;
             }
-            //TODO
-            //repost_pos.manage_products.print (my_grid_view_class.gridview_to_data_table (main_gridview), null);
+            repost_pos.manage_products.print (my_grid_view_class.gridview_to_data_table (main_gridview), null);
         }
 
         private void word_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //  repost_pos.manage_products.to_word (my_grid_view_class.gridview_to_data_table (main_gridview));
+            repost_pos.manage_products.to_word (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
 
         private void excel_btn_Click_1(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_products.to_excel (my_grid_view_class.gridview_to_data_table (main_gridview));
+            repost_pos.manage_products.to_excel (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
 
         private void pdf_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_products.to_pdf (my_grid_view_class.gridview_to_data_table (main_gridview));
+            repost_pos.manage_products.to_pdf (my_grid_view_class.gridview_to_data_table (main_gridview));
         }
 
         #region New
@@ -73,7 +69,7 @@ namespace barber_app.products_forms
         }
         private string IdFromDatabase()
         {
-            DataTable dataTable = connection_class.select("Select isnull(max(id)+1,1) from categories_table");
+            DataTable dataTable = connection_class.select("Select ifnull(max(id)+1,1) from categories_table");
             return dataTable.Rows[0][0].ToString();
         }
         void clearAllAndRunWorker()
@@ -104,7 +100,7 @@ namespace barber_app.products_forms
             {
                 int id = Convert.ToInt32(id_tb.Text);
                 string category = category_name_tb.Text;
-                connection_class.command($"insert into categories_table values ({id},N'{category}')");
+                connection_class.command($"insert into categories_table values ({id},'{category}')");
                 notifications_class.success_message();
                 clearAllAndRunWorker();
             }
@@ -120,7 +116,6 @@ namespace barber_app.products_forms
             DataTable table = connection_class.select(query);
             if (table.Rows.Count != 0)
             {
-                new_btn.PerformClick();
                 id_tb.Text = table.Rows[0]["id"].ToString();
                 category_name_tb.Text = table.Rows[0]["category_name"].ToString();
                 save_btn.Enabled = false; update_btn.Enabled = delete_btn.Enabled = true;
@@ -148,7 +143,7 @@ namespace barber_app.products_forms
             if (notifications_class.my_messageBoxRightYesNo("هل أنت متأكد ؟") == DialogResult.Yes)
             {
                 int id = Convert.ToInt32(id_tb.Text);
-                connection_class.command($"update categories_table set category_name=N'{category_name_tb.Text}' where id={id}");
+                connection_class.command($"update categories_table set category_name='{category_name_tb.Text}' where id={id}");
                 notifications_class.success_message();
                 clearAllAndRunWorker();
             }

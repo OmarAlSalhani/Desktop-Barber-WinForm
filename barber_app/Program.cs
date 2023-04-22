@@ -16,7 +16,7 @@ namespace barber_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main_form());
+            Application.Run(new first_form());
         }
     }
 }

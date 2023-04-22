@@ -52,14 +52,11 @@ namespace barber_app
                 labelControl1.Font = new Font("cairo", 13, FontStyle.Bold);
             }
         }
-
-
         DataTable users_table;
         private void fill_users_worker_DoWork(object sender, DoWorkEventArgs e)
         {
             users_table = connection_class.select("select username from users_table");
         }
-
         private void fill_users_worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             for (int i = 0; i < users_table.Rows.Count; i++)
@@ -85,7 +82,7 @@ namespace barber_app
         {
             string username = username_cb.Text;
             string password = password_tb.Text;
-            DataTable table = connection_class.select($"select * from users_table where username=N'{username}' and password=N'{password}'");
+            DataTable table = connection_class.select($"select * from users_table where username='{username}' and password='{password}'");
             if (table.Rows.Count == 0)
             {
                 return false;
@@ -117,8 +114,6 @@ namespace barber_app
                 if (is_user_exist())
                 {
                     username = username_cb.Text;
-                    if (splashScreenManager1.IsSplashFormVisible == false)
-                        splashScreenManager1.ShowWaitForm();
                     run_worker_class.run(permissions_worker);
                 }
                 else
@@ -133,7 +128,6 @@ namespace barber_app
             try
             {
                 return Convert.ToInt32(table.Rows[0][column].ToString());
-
             }
             catch
             {
@@ -142,37 +136,40 @@ namespace barber_app
         }
         private void permissions_worker_DoWork(object sender, DoWorkEventArgs e)
         {
-          
-
-        /*    #region permissions_customers_table
-            DataTable permissions_customers_table = connection_class.select($"select * from permissions_customers_table where username=N'{username}'");
-            settings_files.permissions_customers.Default.add_customer = role(permissions_customers_table, "add_customer");
-            settings_files.permissions_customers.Default.edit_customer = role(permissions_customers_table, "edit_customer");
-            settings_files.permissions_customers.Default.customer_mdeonee = role(permissions_customers_table, "customer_mdeonee");
-            settings_files.permissions_customers.Default.customers_mqbodat = role(permissions_customers_table, "customers_mqbodat");
-            settings_files.permissions_customers.Default.customer_kshf = role(permissions_customers_table, "customers_kshf");
-            settings_files.permissions_doctors.Default.doctor_manager = role(permissions_customers_table, "add_doctor");
-            settings_files.permissions_doctors.Default.doctor_mdfo3at = role(permissions_customers_table, "doctor_mdfo3at");
-            settings_files.permissions_doctors.Default.doctor_manager = role(permissions_customers_table, "doctor_most7qat");
-            settings_files.permissions_customers.Default.Save();
-            settings_files.permissions_doctors.Default.Save();
-            permissions_worker.ReportProgress(75);
-            #endregion
-        */
+            DataTable permissions_table = connection_class.select($"select * from roles_table where user_id=(select user_id from users_table where username='{username}')");
+            settings_files.permissions_settings.Default.manage_customers = role(permissions_table, "manage_customers");
+            settings_files.permissions_settings.Default.customers_kshf_7sab = role(permissions_table, "customers_kshf_7sab");
+            settings_files.permissions_settings.Default.customers_mdeonee = role(permissions_table, "customers_mdeonee");
+            settings_files.permissions_settings.Default.customers_paied_money = role(permissions_table, "customers_paied_money");
+            settings_files.permissions_settings.Default.open_pos = role(permissions_table, "open_pos");
+            settings_files.permissions_settings.Default.sales_report = role(permissions_table, "sales_report");
+            settings_files.permissions_settings.Default.manage_products = role(permissions_table, "manage_products");
+            settings_files.permissions_settings.Default.manage_categories = role(permissions_table, "manage_categories");
+            settings_files.permissions_settings.Default.manage_settings = role(permissions_table, "manage_settings");
+            settings_files.permissions_settings.Default.manage_storages = role(permissions_table, "manage_storages");
+            settings_files.permissions_settings.Default.storages_operations = role(permissions_table, "storages_operations");
+            settings_files.permissions_settings.Default.manage_users = role(permissions_table, "manage_users");
+            settings_files.permissions_settings.Default.manage_users_roles = role(permissions_table, "manage_users_roles");
+            settings_files.permissions_settings.Default.manage_blackbox = role(permissions_table, "manage_blackbox");
+            settings_files.permissions_settings.Default.snd_qbd = role(permissions_table, "snd_qbd");
+            settings_files.permissions_settings.Default.snd_srf = role(permissions_table, "snd_srf");
+            settings_files.permissions_settings.Default.snds_report = role(permissions_table, "snds_report");
+            settings_files.permissions_settings.Default.manage_daily_brief = role(permissions_table, "manage_daily_brief");
+            settings_files.permissions_settings.Default.manage_today_agle = role(permissions_table, "manage_today_agle");
+            settings_files.permissions_settings.Default.Save();
         }
 
         private void permissions_worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (progress == 100)
-            {
-                settings_files.main_settings.Default.username = username_cb.Text;
-                DataTable table = connection_class.select($"select storage_name,bank_name from users_table where username=N'{username_cb.Text}'");
-                settings_files.main_settings.Default.storage_name = table.Rows[0][0].ToString();
-                settings_files.main_settings.Default.bank_name = table.Rows[0][1].ToString();
-                settings_files.main_settings.Default.Save();
-                splashScreenManager1.CloseWaitForm();
-                Hide();
-            }
+            DataTable userTable = connection_class.select($"select user_id from users_table where username='{username_cb.Text}'");
+            settings_files.main_settings.Default.userID = Convert.ToInt32(userTable.Rows[0][0]);
+            settings_files.main_settings.Default.username = username_cb.Text;
+            DataTable table = connection_class.select($"select storage_id from users_table where username='{username_cb.Text}'");
+            settings_files.main_settings.Default.storage_id = Convert.ToInt32(table.Rows[0][0]);
+            settings_files.main_settings.Default.Save();
+            Hide();
+            main_form form = new main_form();
+            form.Show();
         }
         int progress;
         private void permissions_worker_ProgressChanged(object sender, ProgressChangedEventArgs e)

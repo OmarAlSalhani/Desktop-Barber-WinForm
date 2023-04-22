@@ -157,25 +157,13 @@ namespace barber_app.settings_files {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string storage_name {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int storage_id {
             get {
-                return ((string)(this["storage_name"]));
+                return ((int)(this["storage_id"]));
             }
             set {
-                this["storage_name"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string bank_name {
-            get {
-                return ((string)(this["bank_name"]));
-            }
-            set {
-                this["bank_name"] = value;
+                this["storage_id"] = value;
             }
         }
         
@@ -188,6 +176,42 @@ namespace barber_app.settings_files {
             }
             set {
                 this["userID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool first_run {
+            get {
+                return ((bool)(this["first_run"]));
+            }
+            set {
+                this["first_run"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string invoice_printer_name {
+            get {
+                return ((string)(this["invoice_printer_name"]));
+            }
+            set {
+                this["invoice_printer_name"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string reports_printer_name {
+            get {
+                return ((string)(this["reports_printer_name"]));
+            }
+            set {
+                this["reports_printer_name"] = value;
             }
         }
     }

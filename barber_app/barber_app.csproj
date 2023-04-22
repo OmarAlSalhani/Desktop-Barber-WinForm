@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,16 +36,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="N2C">
+      <HintPath>F:\نسخ من برنامج الصيدلية\31-07-2021\for_test_pharmacy - Copy\PharmacyManage2\bin\Debug\N2C.dll</HintPath>
+    </Reference>
     <Reference Include="OmarNotifications">
       <HintPath>..\..\..\..\..\..\Projects\for_test_pharmacy - Copy\PharmacyManage2\bin\Debug\OmarNotifications.dll</HintPath>
     </Reference>
@@ -52,6 +75,15 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,9 +97,32 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ar_agel_notifications_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_agel_notifications_form.designer.cs">
+      <DependentUpon>ar_agel_notifications_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ar_blackbox_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_blackbox_form.designer.cs">
+      <DependentUpon>ar_blackbox_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ar_daily_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_daily_report_form.designer.cs">
+      <DependentUpon>ar_daily_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ash3ar_forms\da2en_ash3ar_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ash3ar_forms\da2en_ash3ar_form.designer.cs">
+      <DependentUpon>da2en_ash3ar_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="classes\add_kshf_class.cs" />
     <Compile Include="classes\aol_moda_class.cs" />
-    <Compile Include="classes\bank_class.cs" />
     <Compile Include="classes\comboBox_class.cs" />
     <Compile Include="classes\connection_class.cs" />
     <Compile Include="classes\const_variables_class.cs" />
@@ -79,7 +134,6 @@
     <Compile Include="classes\my_grid_view_class.cs" />
     <Compile Include="classes\navigation_class.cs" />
     <Compile Include="classes\notifications_class.cs" />
-    <Compile Include="classes\permissions_class.cs" />
     <Compile Include="classes\run_worker_class.cs" />
     <Compile Include="classes\storage_class.cs" />
     <Compile Include="classes\texts_class.cs" />
@@ -133,6 +187,12 @@
       <DependentUpon>pos_form.cs</DependentUpon>
     </Compile>
     <Compile Include="fatora_forms\products_model.cs" />
+    <Compile Include="first_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first_form.designer.cs">
+      <DependentUpon>first_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +219,114 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports_files\ash3ar_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\ash3ar_report.designer.cs">
+      <DependentUpon>ash3ar_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\A4_pos_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\A4_pos_report.designer.cs">
+      <DependentUpon>A4_pos_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_kshf_7sab_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_kshf_7sab_report.designer.cs">
+      <DependentUpon>customers_kshf_7sab_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_mdeonea_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_mdeonea_report.designer.cs">
+      <DependentUpon>customers_mdeonea_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_paied_money_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_paied_money_report.designer.cs">
+      <DependentUpon>customers_paied_money_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\logs_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\logs_report.designer.cs">
+      <DependentUpon>logs_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_customers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_customers.designer.cs">
+      <DependentUpon>manage_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_products.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_products.designer.cs">
+      <DependentUpon>manage_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_storage_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_storage_report.designer.cs">
+      <DependentUpon>manage_storage_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\pos_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\pos_report.designer.cs">
+      <DependentUpon>pos_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\sales_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\sales_report.designer.cs">
+      <DependentUpon>sales_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snds_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snds_report.designer.cs">
+      <DependentUpon>snds_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report.designer.cs">
+      <DependentUpon>snd_kbd_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report2.designer.cs">
+      <DependentUpon>snd_kbd_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report.designer.cs">
+      <DependentUpon>snd_srf_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report2.designer.cs">
+      <DependentUpon>snd_srf_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\storage_operations1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\storage_operations1.designer.cs">
+      <DependentUpon>storage_operations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\users_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\users_report.designer.cs">
+      <DependentUpon>users_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="settings_files\database_settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -169,11 +337,40 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>main_settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="settings_files\permissions_settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>permissions_settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="settings_forms\ar_main_settings_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="settings_forms\ar_main_settings_form.designer.cs">
       <DependentUpon>ar_main_settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_expinsive_type_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_expinsive_type_form.designer.cs">
+      <DependentUpon>ar_expinsive_type_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snds_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snds_report_form.designer.cs">
+      <DependentUpon>ar_snds_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_qbd_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_qbd_form.designer.cs">
+      <DependentUpon>ar_snd_qbd_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_srf_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_srf_form.designer.cs">
+      <DependentUpon>ar_snd_srf_form.cs</DependentUpon>
     </Compile>
     <Compile Include="storages_forms\ar_storages_form.cs">
       <SubType>Form</SubType>
@@ -199,12 +396,18 @@
     <Compile Include="users_forms\ar_user_permissions_form.designer.cs">
       <DependentUpon>ar_user_permissions_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="ar_agel_notifications_form.resx">
+      <DependentUpon>ar_agel_notifications_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ar_blackbox_form.resx">
+      <DependentUpon>ar_blackbox_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ar_daily_report_form.resx">
+      <DependentUpon>ar_daily_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ash3ar_forms\da2en_ash3ar_form.resx">
+      <DependentUpon>da2en_ash3ar_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customers_forms\ar_customers_form.resx">
       <DependentUpon>ar_customers_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,8 +432,12 @@
     <EmbeddedResource Include="fatora_forms\pos_form.resx">
       <DependentUpon>pos_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="first_form.resx">
+      <DependentUpon>first_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
@@ -252,8 +459,74 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reports_files\ash3ar_report.resx">
+      <DependentUpon>ash3ar_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\A4_pos_report.resx">
+      <DependentUpon>A4_pos_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_kshf_7sab_report.resx">
+      <DependentUpon>customers_kshf_7sab_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_mdeonea_report.resx">
+      <DependentUpon>customers_mdeonea_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_paied_money_report.resx">
+      <DependentUpon>customers_paied_money_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\logs_report.resx">
+      <DependentUpon>logs_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_customers.resx">
+      <DependentUpon>manage_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_products.resx">
+      <DependentUpon>manage_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_storage_report.resx">
+      <DependentUpon>manage_storage_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\pos_report.resx">
+      <DependentUpon>pos_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\sales_report.resx">
+      <DependentUpon>sales_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snds_report.resx">
+      <DependentUpon>snds_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_kbd_report.resx">
+      <DependentUpon>snd_kbd_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_kbd_report2.resx">
+      <DependentUpon>snd_kbd_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_srf_report.resx">
+      <DependentUpon>snd_srf_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_srf_report2.resx">
+      <DependentUpon>snd_srf_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\storage_operations1.resx">
+      <DependentUpon>storage_operations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\users_report.resx">
+      <DependentUpon>users_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="settings_forms\ar_main_settings_form.resx">
       <DependentUpon>ar_main_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_expinsive_type_form.resx">
+      <DependentUpon>ar_expinsive_type_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snds_report_form.resx">
+      <DependentUpon>ar_snds_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snd_qbd_form.resx">
+      <DependentUpon>ar_snd_qbd_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snd_srf_form.resx">
+      <DependentUpon>ar_snd_srf_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="storages_forms\ar_storages_form.resx">
       <DependentUpon>ar_storages_form.cs</DependentUpon>
@@ -267,9 +540,7 @@
     <EmbeddedResource Include="users_forms\ar_user_permissions_form.resx">
       <DependentUpon>ar_user_permissions_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraForm1.resx">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\barber_app.products_forms.products_model.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -287,6 +558,10 @@
     <None Include="settings_files\main_settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>main_settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="settings_files\permissions_settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>permissions_settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -403,5 +678,21 @@
   <ItemGroup>
     <None Include="Resources\a_cash.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33281.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
 </Project>

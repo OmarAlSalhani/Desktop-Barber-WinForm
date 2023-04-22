@@ -61,8 +61,8 @@ namespace barber_app.storages_forms
             {
                 try
                 {
-                    connection_class.command($"insert into storage_table(id,storage_name,storage_value) values({Convert.ToInt32(id_tb.Text)},N'{storage_name_textbox.Text.Trim()}',{Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2)})");
-                    storage_class.storage_log_add($"إضافة رصيد أفتتاحي إلى الخزنة رقم : {id_tb.Text}", Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2), storage_name_textbox.Text.Trim());
+                    connection_class.command($"insert into storage_table(id,storage_name,storage_value) values({Convert.ToInt32(id_tb.Text)},'{storage_name_textbox.Text.Trim()}',{Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2)})");
+                    storage_class.storage_log_add($"إضافة رصيد أفتتاحي إلى الخزنة رقم : {id_tb.Text}", Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2), Convert.ToInt32(id_tb.Text));
                     logs_class.log_add($"إضافة الخزنة {storage_name_textbox.Text.Trim()} برصيد إفتتاحي {storage_value_textbox.Text}", 0, "الخزنات");
                     classes.notifications_class.success_message();
                     run_worker_class.run(backgroundWorker1);
@@ -141,7 +141,7 @@ namespace barber_app.storages_forms
         }
         int get_id()
         {
-            DataTable table = connection_class.select("select isnull(max(id)+1,1) from storage_table");
+            DataTable table = connection_class.select("select ifnull(max(id)+1,1) from storage_table");
             return Convert.ToInt32(table.Rows[0][0]);
         }
         int get_lbl_id()
@@ -151,7 +151,7 @@ namespace barber_app.storages_forms
         }
         void update_storages_in_user_table(string old_name, string new_name)
         {
-            connection_class.command($"update users_table set storage_name=N'{new_name}' where storage_name=N'{old_name}'");
+            connection_class.command($"update users_table set storage_name='{new_name}' where storage_name='{old_name}'");
         }
         private void update_btn_Click(object sender, EventArgs e)
         {
@@ -168,10 +168,10 @@ namespace barber_app.storages_forms
                     DialogResult dr = classes.notifications_class.my_messageBox("هل تريد تعديل الخزنة ؟", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dr == DialogResult.Yes)
                     {
-                        connection_class.command($"update storage_table set storage_name=N'{storage_name_textbox.Text.Trim()}',storage_value={Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2)} where id={get_lbl_id()} ");
+                        connection_class.command($"update storage_table set storage_name='{storage_name_textbox.Text.Trim()}',storage_value={Math.Round(Convert.ToDouble(storage_value_textbox.Text), 2)} where id={get_lbl_id()} ");
                         update_storages_in_user_table(old_name, storage_name_textbox.Text.Trim());
                         classes.notifications_class.success_message();
-                        storage_class.storage_log_add($"تعديل الخزنة ذات الرقم {id_tb.Text}", Convert.ToDouble(storage_value_textbox.Text), storage_name_textbox.Text.Trim());
+                        storage_class.storage_log_add($"تعديل الخزنة ذات الرقم {id_tb.Text}", Convert.ToDouble(storage_value_textbox.Text), get_lbl_id());
                         logs_class.log_add($"تعديل الخزنة ذات الرقم {id_tb.Text}", 0, "الخزنات");
                         run_worker_class.run(backgroundWorker1);
                     }
@@ -237,13 +237,12 @@ namespace barber_app.storages_forms
                 notifications_class.no_data_message();
                 return;
             }
-            //TODO
-            //repost_pos.manage_storage_report.print(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
+            repost_pos.manage_storage_report.print(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view),null);
         }
         string names = "";
         bool is_storage_bind_with_users(string storage_name)
         {
-            DataTable table = connection_class.select($"select username from users_table where storage_name=N'{storage_name}'");
+            DataTable table = connection_class.select($"select username from users_table where storage_name='{storage_name}'");
             if (table.Rows.Count == 0)
             {
                 return false;
@@ -299,20 +298,17 @@ namespace barber_app.storages_forms
 
         private void pdf_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_storage_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
+           repost_pos.manage_storage_report.to_pdf(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
         }
 
         private void excel_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            // repost_pos.manage_storage_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
+            repost_pos.manage_storage_report.to_excel(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
         }
 
         private void word_btn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //repost_pos.manage_storage_report.to_word(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
+           repost_pos.manage_storage_report.to_word(classes.my_grid_view_class.gridview_to_data_table(quantites_grid_view));
         }
 
         private void quantites_grid_view_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)

@@ -36,6 +36,11 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.label10 = new System.Windows.Forms.Label();
+            this.invoice_printer_name_cb = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.report_printer_name_cb = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.tax_value_cb = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.reports_print_type_cb = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,12 +61,14 @@
             this.landline_tb = new DevExpress.XtraEditors.ButtonEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.barber_name_tb = new DevExpress.XtraEditors.ButtonEdit();
-            this.tax_value_cb = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoice_printer_name_cb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report_printer_name_cb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tax_value_cb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reports_print_type_cb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_print_type_cb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_paper_cb.Properties)).BeginInit();
@@ -71,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mobile_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.landline_tb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barber_name_tb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tax_value_cb.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -122,7 +128,7 @@
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl4.Controls.Add(this.save_btn);
-            this.groupControl4.Location = new System.Drawing.Point(2, 398);
+            this.groupControl4.Location = new System.Drawing.Point(2, 431);
             this.groupControl4.LookAndFeel.SkinName = "DevExpress Style";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
@@ -147,6 +153,10 @@
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupControl2.Controls.Add(this.label10);
+            this.groupControl2.Controls.Add(this.invoice_printer_name_cb);
+            this.groupControl2.Controls.Add(this.label9);
+            this.groupControl2.Controls.Add(this.report_printer_name_cb);
             this.groupControl2.Controls.Add(this.tax_value_cb);
             this.groupControl2.Controls.Add(this.label8);
             this.groupControl2.Controls.Add(this.reports_print_type_cb);
@@ -172,9 +182,114 @@
             this.groupControl2.LookAndFeel.SkinName = "DevExpress Style";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(623, 357);
+            this.groupControl2.Size = new System.Drawing.Size(623, 390);
             this.groupControl2.TabIndex = 164;
             this.groupControl2.Text = "الإعدادات الأساسية";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Cairo", 10F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label10.Location = new System.Drawing.Point(525, 317);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 26);
+            this.label10.TabIndex = 219;
+            this.label10.Text = "طابعة الفواتير";
+            // 
+            // invoice_printer_name_cb
+            // 
+            this.invoice_printer_name_cb.EditValue = "إضغط للإختيار";
+            this.invoice_printer_name_cb.Location = new System.Drawing.Point(371, 313);
+            this.invoice_printer_name_cb.Name = "invoice_printer_name_cb";
+            this.invoice_printer_name_cb.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.invoice_printer_name_cb.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.invoice_printer_name_cb.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.invoice_printer_name_cb.Properties.Appearance.Options.UseFont = true;
+            this.invoice_printer_name_cb.Properties.Appearance.Options.UseTextOptions = true;
+            this.invoice_printer_name_cb.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.invoice_printer_name_cb.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.invoice_printer_name_cb.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.invoice_printer_name_cb.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.invoice_printer_name_cb.Properties.AppearanceFocused.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.invoice_printer_name_cb.Properties.AppearanceFocused.Options.UseFont = true;
+            this.invoice_printer_name_cb.Properties.AppearanceItemSelected.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.invoice_printer_name_cb.Properties.AppearanceItemSelected.Options.UseFont = true;
+            this.invoice_printer_name_cb.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.invoice_printer_name_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.invoice_printer_name_cb.Properties.DropDownRows = 3;
+            this.invoice_printer_name_cb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.invoice_printer_name_cb.Size = new System.Drawing.Size(153, 34);
+            this.invoice_printer_name_cb.TabIndex = 218;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Cairo", 10F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label9.Location = new System.Drawing.Point(525, 356);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 26);
+            this.label9.TabIndex = 217;
+            this.label9.Text = "طابعة التقارير";
+            // 
+            // report_printer_name_cb
+            // 
+            this.report_printer_name_cb.EditValue = "إضغط للإختيار";
+            this.report_printer_name_cb.Location = new System.Drawing.Point(371, 352);
+            this.report_printer_name_cb.Name = "report_printer_name_cb";
+            this.report_printer_name_cb.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.report_printer_name_cb.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.report_printer_name_cb.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.report_printer_name_cb.Properties.Appearance.Options.UseFont = true;
+            this.report_printer_name_cb.Properties.Appearance.Options.UseTextOptions = true;
+            this.report_printer_name_cb.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.report_printer_name_cb.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.report_printer_name_cb.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.report_printer_name_cb.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.report_printer_name_cb.Properties.AppearanceFocused.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.report_printer_name_cb.Properties.AppearanceFocused.Options.UseFont = true;
+            this.report_printer_name_cb.Properties.AppearanceItemSelected.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.report_printer_name_cb.Properties.AppearanceItemSelected.Options.UseFont = true;
+            this.report_printer_name_cb.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.report_printer_name_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.report_printer_name_cb.Properties.DropDownRows = 3;
+            this.report_printer_name_cb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.report_printer_name_cb.Size = new System.Drawing.Size(153, 34);
+            this.report_printer_name_cb.TabIndex = 216;
+            // 
+            // tax_value_cb
+            // 
+            this.tax_value_cb.EditValue = "إضغط للإختيار";
+            this.tax_value_cb.Location = new System.Drawing.Point(314, 155);
+            this.tax_value_cb.Name = "tax_value_cb";
+            this.tax_value_cb.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.tax_value_cb.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.tax_value_cb.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.tax_value_cb.Properties.Appearance.Options.UseFont = true;
+            this.tax_value_cb.Properties.Appearance.Options.UseTextOptions = true;
+            this.tax_value_cb.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tax_value_cb.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.tax_value_cb.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.tax_value_cb.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.tax_value_cb.Properties.AppearanceFocused.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.tax_value_cb.Properties.AppearanceFocused.Options.UseFont = true;
+            this.tax_value_cb.Properties.AppearanceItemSelected.Font = new System.Drawing.Font("Cairo", 10.5F);
+            this.tax_value_cb.Properties.AppearanceItemSelected.Options.UseFont = true;
+            this.tax_value_cb.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.tax_value_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tax_value_cb.Properties.DropDownRows = 3;
+            this.tax_value_cb.Properties.Items.AddRange(new object[] {
+            "10 %",
+            "15 %"});
+            this.tax_value_cb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.tax_value_cb.Size = new System.Drawing.Size(210, 34);
+            this.tax_value_cb.TabIndex = 215;
             // 
             // label8
             // 
@@ -548,42 +663,13 @@
             this.barber_name_tb.Size = new System.Drawing.Size(210, 34);
             this.barber_name_tb.TabIndex = 173;
             // 
-            // tax_value_cb
-            // 
-            this.tax_value_cb.EditValue = "إضغط للإختيار";
-            this.tax_value_cb.Location = new System.Drawing.Point(314, 155);
-            this.tax_value_cb.Name = "tax_value_cb";
-            this.tax_value_cb.Properties.AdvancedModeOptions.AllowCaretAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.tax_value_cb.Properties.AdvancedModeOptions.AllowSelectionAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.tax_value_cb.Properties.Appearance.Font = new System.Drawing.Font("Cairo", 10.5F);
-            this.tax_value_cb.Properties.Appearance.Options.UseFont = true;
-            this.tax_value_cb.Properties.Appearance.Options.UseTextOptions = true;
-            this.tax_value_cb.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tax_value_cb.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.tax_value_cb.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Cairo", 10.5F);
-            this.tax_value_cb.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.tax_value_cb.Properties.AppearanceFocused.Font = new System.Drawing.Font("Cairo", 10.5F);
-            this.tax_value_cb.Properties.AppearanceFocused.Options.UseFont = true;
-            this.tax_value_cb.Properties.AppearanceItemSelected.Font = new System.Drawing.Font("Cairo", 10.5F);
-            this.tax_value_cb.Properties.AppearanceItemSelected.Options.UseFont = true;
-            this.tax_value_cb.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.tax_value_cb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.tax_value_cb.Properties.DropDownRows = 3;
-            this.tax_value_cb.Properties.Items.AddRange(new object[] {
-            "10 %",
-            "15 %"});
-            this.tax_value_cb.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.tax_value_cb.Size = new System.Drawing.Size(210, 34);
-            this.tax_value_cb.TabIndex = 215;
-            // 
             // ar_main_settings_form
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 475);
+            this.ClientSize = new System.Drawing.Size(627, 509);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -602,6 +688,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invoice_printer_name_cb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.report_printer_name_cb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tax_value_cb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reports_print_type_cb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_print_type_cb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_paper_cb.Properties)).EndInit();
@@ -611,7 +700,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mobile_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.landline_tb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barber_name_tb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tax_value_cb.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -646,5 +734,9 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.ButtonEdit barber_name_tb;
         private DevExpress.XtraEditors.ComboBoxEdit tax_value_cb;
+        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.ComboBoxEdit invoice_printer_name_cb;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.ComboBoxEdit report_printer_name_cb;
     }
 }

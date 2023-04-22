@@ -101,7 +101,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1205, 38);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1232, 38);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // label1
@@ -110,7 +110,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cairo", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(512, 1);
+            this.label1.Location = new System.Drawing.Point(525, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 36);
             this.label1.TabIndex = 0;
@@ -131,9 +131,9 @@
             this.groupControl17.Controls.Add(this.pdf_btn);
             this.groupControl17.Controls.Add(this.word_btn);
             this.groupControl17.Controls.Add(this.print_btn);
-            this.groupControl17.Location = new System.Drawing.Point(4, 480);
+            this.groupControl17.Location = new System.Drawing.Point(2, 477);
             this.groupControl17.Name = "groupControl17";
-            this.groupControl17.Size = new System.Drawing.Size(1197, 77);
+            this.groupControl17.Size = new System.Drawing.Size(1228, 77);
             this.groupControl17.TabIndex = 69;
             this.groupControl17.Text = "العمليات المتاحة وخيارات الطباعة والتصدير";
             // 
@@ -143,7 +143,7 @@
             this.excel_btn.Appearance.Options.UseFont = true;
             this.excel_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_excel;
             this.excel_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.excel_btn.Location = new System.Drawing.Point(492, 31);
+            this.excel_btn.Location = new System.Drawing.Point(492, 35);
             this.excel_btn.Name = "excel_btn";
             this.excel_btn.Size = new System.Drawing.Size(105, 39);
             this.excel_btn.TabIndex = 6;
@@ -156,7 +156,7 @@
             this.pdf_btn.Appearance.Options.UseFont = true;
             this.pdf_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_pdf;
             this.pdf_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.pdf_btn.Location = new System.Drawing.Point(383, 31);
+            this.pdf_btn.Location = new System.Drawing.Point(383, 35);
             this.pdf_btn.Name = "pdf_btn";
             this.pdf_btn.Size = new System.Drawing.Size(105, 39);
             this.pdf_btn.TabIndex = 3;
@@ -169,7 +169,7 @@
             this.word_btn.Appearance.Options.UseFont = true;
             this.word_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_word;
             this.word_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.word_btn.Location = new System.Drawing.Point(601, 31);
+            this.word_btn.Location = new System.Drawing.Point(601, 35);
             this.word_btn.Name = "word_btn";
             this.word_btn.Size = new System.Drawing.Size(105, 39);
             this.word_btn.TabIndex = 5;
@@ -182,7 +182,7 @@
             this.print_btn.Appearance.Options.UseFont = true;
             this.print_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_print;
             this.print_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.print_btn.Location = new System.Drawing.Point(711, 31);
+            this.print_btn.Location = new System.Drawing.Point(711, 35);
             this.print_btn.Name = "print_btn";
             this.print_btn.Size = new System.Drawing.Size(105, 39);
             this.print_btn.TabIndex = 4;
@@ -191,7 +191,6 @@
             // 
             // groupControl3
             // 
-            this.groupControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl3.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl3.Appearance.Options.UseBackColor = true;
@@ -204,9 +203,9 @@
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl3.Controls.Add(this.show_report_btn);
-            this.groupControl3.Location = new System.Drawing.Point(1086, 43);
+            this.groupControl3.Location = new System.Drawing.Point(1084, 41);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(115, 71);
+            this.groupControl3.Size = new System.Drawing.Size(146, 71);
             this.groupControl3.TabIndex = 68;
             this.groupControl3.Text = "بحث";
             // 
@@ -217,16 +216,15 @@
             this.show_report_btn.Appearance.Options.UseFont = true;
             this.show_report_btn.ImageOptions.Image = global::barber_app.Properties.Resources.a_show_report;
             this.show_report_btn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.show_report_btn.Location = new System.Drawing.Point(6, 32);
+            this.show_report_btn.Location = new System.Drawing.Point(10, 34);
             this.show_report_btn.Name = "show_report_btn";
-            this.show_report_btn.Size = new System.Drawing.Size(102, 34);
+            this.show_report_btn.Size = new System.Drawing.Size(124, 34);
             this.show_report_btn.TabIndex = 38;
             this.show_report_btn.Text = "عرض";
             this.show_report_btn.Click += new System.EventHandler(this.show_report_btn_Click);
             // 
             // groupControl2
             // 
-            this.groupControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl2.Appearance.Options.UseBackColor = true;
@@ -240,7 +238,7 @@
             this.groupControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl2.Controls.Add(this.fatora_type_cb);
             this.groupControl2.Controls.Add(this.fatora_type_cbx);
-            this.groupControl2.Location = new System.Drawing.Point(917, 43);
+            this.groupControl2.Location = new System.Drawing.Point(915, 41);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(166, 71);
             this.groupControl2.TabIndex = 67;
@@ -282,7 +280,6 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl1.Appearance.Options.UseBackColor = true;
@@ -296,7 +293,7 @@
             this.groupControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl1.Controls.Add(this.customer_cbx);
             this.groupControl1.Controls.Add(this.customer_name_cb);
-            this.groupControl1.Location = new System.Drawing.Point(729, 43);
+            this.groupControl1.Location = new System.Drawing.Point(727, 41);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(185, 71);
             this.groupControl1.TabIndex = 66;
@@ -342,7 +339,6 @@
             // 
             // groupControl6
             // 
-            this.groupControl6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl6.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl6.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl6.Appearance.Options.UseBackColor = true;
@@ -356,7 +352,7 @@
             this.groupControl6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl6.Controls.Add(this.username_cbx);
             this.groupControl6.Controls.Add(this.username_cb);
-            this.groupControl6.Location = new System.Drawing.Point(542, 43);
+            this.groupControl6.Location = new System.Drawing.Point(540, 41);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(185, 71);
             this.groupControl6.TabIndex = 65;
@@ -402,7 +398,6 @@
             // 
             // groupControl8
             // 
-            this.groupControl8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.groupControl8.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl8.Appearance.Options.UseBackColor = true;
@@ -416,7 +411,7 @@
             this.groupControl8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupControl8.Controls.Add(this.id_barcode_tb);
             this.groupControl8.Controls.Add(this.id_barcode_radio);
-            this.groupControl8.Location = new System.Drawing.Point(357, 43);
+            this.groupControl8.Location = new System.Drawing.Point(355, 41);
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.Size = new System.Drawing.Size(183, 71);
             this.groupControl8.TabIndex = 64;
@@ -451,7 +446,6 @@
             // 
             // groupControl7
             // 
-            this.groupControl7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupControl7.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.groupControl7.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupControl7.Appearance.Options.UseBackColor = true;
@@ -468,7 +462,7 @@
             this.groupControl7.Controls.Add(this.label6);
             this.groupControl7.Controls.Add(this.last_date);
             this.groupControl7.Controls.Add(this.label7);
-            this.groupControl7.Location = new System.Drawing.Point(4, 43);
+            this.groupControl7.Location = new System.Drawing.Point(2, 41);
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.Size = new System.Drawing.Size(350, 71);
             this.groupControl7.TabIndex = 63;
@@ -554,10 +548,10 @@
             // gridControl2
             // 
             this.gridControl2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gridControl2.Location = new System.Drawing.Point(4, 117);
+            this.gridControl2.Location = new System.Drawing.Point(2, 115);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1197, 359);
+            this.gridControl2.Size = new System.Drawing.Size(1228, 359);
             this.gridControl2.TabIndex = 62;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -595,6 +589,7 @@
             this.gridView2.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.AllowGroupExpandAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.gridView2.OptionsBehavior.AllowIncrementalSearch = true;
@@ -618,7 +613,6 @@
             this.gridView2.OptionsImageLoad.AnimationType = DevExpress.Utils.ImageContentAnimationType.Slide;
             this.gridView2.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
             this.gridView2.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
@@ -631,7 +625,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 563);
+            this.ClientSize = new System.Drawing.Size(1232, 556);
             this.Controls.Add(this.groupControl17);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
